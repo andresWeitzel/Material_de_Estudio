@@ -1,0 +1,10 @@
+
+**PASOS PARA LA CORRECTA DESCOMPRESION**
+
+Comprimi el libro en 6 archivos Winrar de 5MB c/u para el almacenamiento en Nube.
+
+Una vez descargadas las 6 partes del libro, seleccionarlas y dar click en Extraer en "Sistemas De Control Automatico(Benjamin ..)/
+
+Se te crea una carpeta y dentro de la misma tenes el pdf
+
+-By Andres
