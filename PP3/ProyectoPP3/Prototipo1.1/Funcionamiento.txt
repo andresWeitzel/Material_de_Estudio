@@ -1,0 +1,28 @@
+
+**Implementacion de Sistema de Control para tanques de agua**
+
+Se implementa un sistema de control automatizado en el cual se controlara el nivel de agua del tanque, la temperatura,la humedad y el llenado del tanque con una bomba de agua. 
+
+La humedad y la temperatura se controlaran con un sensor dht11 y se mostrara en una pantalla lcd
+El nivel del agua del tanque se controlara con un sensor de agua
+La señal de advertencia la dara un buzzer y unos leds
+El llenado del tanque lo hara una bomba y esta a su vez se contralara a traves de un rele mediante un controlador
+
+
+Cuando el nivel del agua del tanque sea maximo se dara señales de advertencia sonoras y luminosas(buzzer y leds), cuando el nivel del agua sea minimo se dara tambien las mismas señales y se procedera a 
+activar la  bomba de agua para el llenado hasta el nivel estipulado por el programa. Una vez estabilizado el nivel de agua la bomba interrumpe su funcionamiento.
+ 
+
+**Componentes**
+1 buzzer
+1 sensor de nivel de agua
+1 sensor de t° y humedad dht11
+2 leds
+1 pantalla lcd
+1 bomba de agua
+1 rele
+1 tanque de agua o recipiente
+1 controlador(arduino nano)
+manguera plastica
+
+andres weitzel

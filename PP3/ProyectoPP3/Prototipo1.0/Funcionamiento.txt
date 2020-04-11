@@ -1,0 +1,30 @@
+
+**Implementacion de Sistema de Control para tanques de agua**
+
+Se implementa un sistema de control automatizado en el cual se controlara el nivel de agua del tanque, la temperatura,la humedad y el caudal de salida del tanque. 
+
+La humedad y la temperatura se controlaran con un sensor dht11
+El nivel del agua del tanque se controlara con un sensor de agua
+La señal de advertencia la dara un buzzer
+El caudal de salida del tanque lo controlara un motor
+
+Cuando el nivel del agua del tanque sea maximo se liberara un cierto caudal de agua del mismo para la estabilizacion que a su vez se activara una alarma(buzzer) 
+a modo de advertencia, del mismo modo se activara el buzzer cuando el nivel del caudal sea minimo, cerrando la salida de la valvula del tanque.
+
+El control de la salida de agua se maneja con un motor y una tapa, y estos a su vez con un rele, que conmutara cuando le envie la señal de habilitaciion un 
+controlador(en este caso un arduino).
+Se controlara el angulo de giro del motor para que este a su vez produzca un movimiento de la tapa, dependiendo el angulo de giro se tendra mayor o menor apertura 
+de la tapa y esta a su vez dejara pasar mayor  o menor caudal de la manguera de salida del tanque. 
+
+**Componentes**
+1 buzzer
+1 sensor de nivel de agua
+1 sensor de t° y humedad dht11
+1 motor(servo sg90 o motor paso a paso 28-BYJ-48)
+1 tope o tapa para la salida del caudal del tanque
+1 rele
+1 tanque de agua o recipiente
+1 controlador(arduino nano)
+n cm de tubos plasticos
+
+andres weitzel
