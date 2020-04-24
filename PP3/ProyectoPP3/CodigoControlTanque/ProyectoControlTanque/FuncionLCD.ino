@@ -12,9 +12,9 @@ void outputLcd(){
   lcd.clear();
   //--Imprimimos la lectura del sensor de agua--
   lcd.setCursor(0,0);
-  lcd.print("NIVEL DEL AGUA:");
+  lcd.print("CAPACIDAD LIMITE:");
   lcd.setCursor(7,1);//columna 8 fila 1
-  lcd.print(nivelAgua);lcd.print("%"); 
+  lcd.print(limiteAgua);lcd.print("%"); 
   delay(200);
  
 }
