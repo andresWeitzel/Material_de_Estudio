@@ -1,0 +1,49 @@
+¿cómo funciona? (describir el bien o servicio)
+Detallado debajo
+
+ ¿Cuáles son sus aplicaciones?
+Testing de Software
+
+ ¿Cómo piensa producirlo?
+Detallado debajo
+
+ ¿A quién piensa venderlo?
+No cumple las caracteristicas de venta 
+
+ ¿Cómo piensa comercializarlo?
+No cumple las caracteristicas de comercializacion 
+
+ ¿Cuáles son sus principales competidores?
+Ninguno
+
+ ¿Cuáles son sus planes a corto, mediano y largo plazo?
+Creacion,Modularizacion, Testing, Erosion de Codigo. 
+
+******************************************************
+*********************SERVICIO*************************
+******************************************************
+
+Descripcion--> 
+	Desarrollo de una GUI como estructara CRUD, junto a una DB implementada como Server Local para una tentativa empresa funcionando como prueba de Software
+
+Descripcion Vulgar-->Interfaz Grafica en donde se hagan consultas,agregados,eliminacion,etc de productos  de una empresa a una base de datos (instalada y configurada previamente en el dispositivo).
+ 
+
+Constitucion-->
+               Lenguaje:Java(Principal),(Puede que implemente algun otro)
+		Entorno de Desarrollo:Netbeans
+		Kit de desarrollo: JDK v11
+		Herramientas:Collection y Frameworks
+		Base de Datos:Relacional(SQL)
+		Server:Local, XAMPP
+
+Funcionalidad-->
+	Estructura CRUD
+	Agilidad en consultas de productos
+	Facil entendimiento con el Software
+	GUI de rapida comprension y manejo
+	Diseño UX/UI(Tentativo)
+
+	
+
+		
