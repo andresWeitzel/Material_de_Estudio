@@ -1,0 +1,4 @@
+1-Click Download c/u de los archivos.rar
+2-Una vez descargados, seleccionar ambos, click derecho y Extraer en ....(SELECCIONAR ARCHIVO UNICO)
+3-Se utilizo este formato por que por repositorio no se puede superar los 25 MB, en caso de descargarlo mediante el celular utilizar 
+algun programa o mismo si el sistema operativo por defecto lo trae para  descomprimirlo.
