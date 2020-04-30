@@ -9,7 +9,7 @@
  #include <DHT.h>
 //---------------Constantes---------------------------
 
-//--Constantes para HC-SR04--
+//--Constantes para pins HC-SR04--
 const int pinecho = 5;
 const int pintrigger = 6;
 //------------------Variables--------------------------
@@ -19,18 +19,20 @@ const int pintrigger = 6;
 unsigned int tiempo,capacidad;
 
 //--Variables dht11-
-int temp;
-int hum;
+int temp,hum;
 
-//--Variables Leds--
+//--Variable Sensor Agua--
+int limiteAgua;
+
+//--Variables pins Leds--
 int pinLedNormal=2;
 int pinLedAdvertencia=3;
 
-//--Variables buzzer--
+//--Variables pin buzzer--
 int pinBuzzer=4;
 
-//--Variable Sensor Agua--
-int limiteAgua=0;
+//--Variable pin Rele--
+int pinRele=7;
 
 
 //------------------Objetos---------------------------
@@ -65,28 +67,37 @@ pinMode(pinLedAdvertencia,OUTPUT);
 pinMode(pinecho, INPUT);
 pinMode(pintrigger, OUTPUT);
 
+//--Configuramos pin del rele--
+pinMode(pinRele,OUTPUT);
+
 }
 //***********************************************************
 //******************LOOP**************************************
 //************************************************************
 void loop()
 {
-  //--Medicion del sensor ultrasonico--
-   funcionHCSR04();
+  //--Funcion del sensor ultrasonico--
+   sensorHCSR04();
+  
+  //--Funcion del sensor dht11--
+  sensorDHT11();
 
-  //--Leemos los valores del sensor de agua--
-  limiteAgua=analogRead(A2);
+  //--Funcion del sensor de Agua--
+  sensorAgua();
+
+   //--Funcion que activa la bomba de agua mediante el rele--
+  releBombaAgua();
+
+  
+  //-- funcion logicaDeControl--
+  logicaDeControl();
+
  
   
-  //--Leemos la temperatura y humedad del dht11--
-  temp=dht.readTemperature();
-  hum=dht.readHumidity();
-
   //--invocamos a la funcion que nos muestra los valored del dht11 y el sensor de agua
   outputLcd();
  
-  //--Invocamos nuestra funcion logicaDeControl--
-  logicaDeControl();
+  
 
   //delay de control de sistema para no tener problema
   delay(200);

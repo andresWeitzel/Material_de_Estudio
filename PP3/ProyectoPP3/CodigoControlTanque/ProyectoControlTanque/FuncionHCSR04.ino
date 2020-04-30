@@ -1,5 +1,5 @@
 //FUNCION LECTURA SENSOR ULTRASONICO
-void funcionHCSR04(){
+void sensorHCSR04(){
   
 // ENVIAR PULSO DE DISPARO EN EL PIN "TRIGGER"
   digitalWrite(pintrigger, LOW);

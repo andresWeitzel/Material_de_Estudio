@@ -5,24 +5,19 @@
 void logicaDeControl(){
 
   //--Invocamos a la funcion del ledNormal para destello
-  if(temp <= 26 && limiteAgua <= 500){
+  if(temp <= 26 && limiteAgua <= 350){
    ledDestello();
-  }
-
-  //--Invocamos a la funcion del ledAdvertencia junto con la funcion buzzerAdvertencia
-  if((temp >= 27 && temp <= 28) || limiteAgua >= 390){
+  }else if((temp >= 27 && temp <= 28) || limiteAgua >= 390){
     ledAdvertenciaLow();
     buzzerAdvertenciaLow();
-  }
-  if((temp >= 29 && temp <= 30) || limiteAgua >= 450){
+  }else if((temp >= 29 && temp <= 30) || limiteAgua >= 450){
     ledAdvertenciaMedium();
     buzzerAdvertenciaMedium();
-  }
-  if(temp >= 31 || limiteAgua >= 550){
+  }else if(temp >= 31 || limiteAgua >= 550){
     ledAdvertenciaHigh();
     buzzerAdvertenciaHigh();
   } 
-  
+ 
 }
   
   

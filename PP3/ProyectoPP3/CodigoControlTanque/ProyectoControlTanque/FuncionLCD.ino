@@ -7,10 +7,10 @@ void outputLcd(){
   lcd.print("TEMPERATURA:");lcd.print(temp);lcd.print((char)223);//Lo ultimo es para grados centigrados
   lcd.setCursor(0, 1);//segunda fila
   lcd.print("HUMEDAD:");lcd.print(hum);lcd.print("%");
+  
   delay(2000);//Para poder visualizar el contenido y no se borre rapido
 
   lcd.clear();
-  
   //--Imprimimos el nivel de agua del tanque--
   //--Usando el sensor ultrasonico--
   lcd.setCursor(0,0);
@@ -18,7 +18,7 @@ void outputLcd(){
   lcd.setCursor(7,1);//Columna 7 fila 1
   lcd.print(capacidad);lcd.print("%");
   
-  
+ 
   
   /*//--Imprimimos la lectura del sensor de agua--
   lcd.setCursor(0,0);
