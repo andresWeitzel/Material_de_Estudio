@@ -1,5 +1,6 @@
 El sensor de Agua funcionara como limitante de capacidad maxima del tanque
 Se añade el sensor ultrasonico para precision del nivel del agua
+Se testea el rele de activacion para la bomba de agua
 Se optimizan las funciones
 Se ordena la Modularizacion de las mismas
 El testeo del Software y Hardware funcionan correctamente
