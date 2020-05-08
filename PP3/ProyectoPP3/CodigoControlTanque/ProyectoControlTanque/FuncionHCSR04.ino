@@ -15,13 +15,13 @@ void sensorHCSR04(){
   // LA VELOCIDAD DEL SONIDO ES DE 340 M/S O 29 MICROSEGUNDOS POR CENTIMETRO
   // DIVIDIMOS EL TIEMPO DEL PULSO ENTRE 58, TIEMPO QUE TARDA RECORRER IDA Y VUELTA UN CENTIMETRO LA ONDA SONORA
   
-  //distancia = tiempo / 58;
+  //distancia = tiempo / 58;//original
 
-  capacidad=tiempo / 58;
-  
+  altura=tiempo / 58;//modificado
+ 
   // ENVIAR EL RESULTADO AL MONITOR SERIAL
-  Serial.print(capacidad);
-  Serial.println(" %");
+  Serial.print(altura);
+  Serial.println(" cm");
   //delay(200);
 
   }

@@ -1,4 +1,4 @@
-
+ 
 //--Funcion Destello Normal--
 void ledDestello(){
   digitalWrite(pinLedNormal,HIGH);//Encendemos el ledNormal

@@ -12,17 +12,13 @@
 //--Constantes para pins HC-SR04--
 const int pinecho = 5;
 const int pintrigger = 6;
-//------------------Variables--------------------------
-
-//--Variables para calculos HC-SR04--
-//unsigned int tiempo, distancia;
-unsigned int tiempo,capacidad;
+//------------------Variables Pines--------------------------
 
 //--Variables dht11-
 int temp,hum;
 
 //--Variable Sensor Agua--
-int limiteAgua;
+int limiteAgua;//A2
 
 //--Variables pins Leds--
 int pinLedNormal=2;
@@ -34,6 +30,19 @@ int pinBuzzer=4;
 //--Variable pin Rele--
 int pinRele=7;
 
+//--LCD NO SE ASIGNA(viene por defecto con el i2c)--
+//SCL=A5;
+//SDA=A4;
+
+//-----------------Variables-------------------------
+//--Calculo de volumen--
+float volumenMin=0.00;
+float volumenMax=2.92;
+float alturaMax=18.80;
+float alturaMin=3.21;
+float volumen=0.00;
+float tiempo,altura;//variables para el HC-SR04 
+//unsigned int tiempo, distancia;//Variables originales oara el hc-sr04
 
 //------------------Objetos---------------------------
 
@@ -78,6 +87,9 @@ void loop()
 {
   //--Funcion del sensor ultrasonico--
    sensorHCSR04();
+
+  //--Funcion de volumen del tanque--
+  volumenTanque();
   
   //--Funcion del sensor dht11--
   sensorDHT11();

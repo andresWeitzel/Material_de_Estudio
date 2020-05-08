@@ -5,18 +5,23 @@
 void logicaDeControl(){
 
   //--Invocamos a la funcion del ledNormal para destello
-  if(temp <= 26 && limiteAgua <= 350){
+  if(temp <= 26 && limiteAgua <= 380){
    ledDestello();
-  }else if((temp >= 27 && temp <= 28) || limiteAgua >= 390){
+  }else if((temp >= 27 && temp <= 28) || (limiteAgua >= 381 && limiteAgua <= 590 )){
     ledAdvertenciaLow();
     buzzerAdvertenciaLow();
-  }else if((temp >= 29 && temp <= 30) || limiteAgua >= 450){
+  }else if((temp >= 29 && temp <= 30) || (limiteAgua >= 491 && limiteAgua <= 540 )){
     ledAdvertenciaMedium();
     buzzerAdvertenciaMedium();
-  }else if(temp >= 31 || limiteAgua >= 550){
+  }else if(temp >= 31 || limiteAgua >= 541){
     ledAdvertenciaHigh();
     buzzerAdvertenciaHigh();
   } 
+
+  /*
+  El sensor de agua tiene una tiempo de recuperacion, por ende se le pasan rangos de medidas y no medidas exactas, dentro de esos rangos
+  corresponden ciertas señales de advertencia, la medida mas alta de cada rango refiere al primer contacto con el agua, luego el sensado se
+  estabiliza*/
  
 }
   

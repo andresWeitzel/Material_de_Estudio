@@ -1,6 +1,8 @@
+
+
 void releBombaAgua(){
 
-if(capacidad < 5){
+if(volumen < volumenMax){
   digitalWrite(pinRele,HIGH);
   
 }else{
