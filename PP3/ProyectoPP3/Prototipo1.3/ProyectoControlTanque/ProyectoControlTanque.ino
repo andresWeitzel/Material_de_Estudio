@@ -37,12 +37,13 @@ int pinRele=7;
 //-----------------Variables-------------------------
 //--Calculo de volumen--
 float volumenMin=0.00;
-float volumenMax=2.92;
-float alturaMax=18.80;
-float alturaMin=3.21;
+float volumenMax=1.50;
+float alturaMax=9.80;
+float alturaMin=18.79;
 float volumen=0.00;
 float tiempo,altura;//variables para el HC-SR04 
-//unsigned int tiempo, distancia;//Variables originales oara el hc-sr04
+
+//unsigned int tiempo, distancia;//Variables de altura para el hc-sr04
 
 //------------------Objetos---------------------------
 
@@ -85,6 +86,9 @@ pinMode(pinRele,OUTPUT);
 //************************************************************
 void loop()
 {
+    //--invocamos a la funcion que nos muestra los valores en la pantalla lcd
+  outputLcd();
+  
   //--Funcion del sensor ultrasonico--
    sensorHCSR04();
 
@@ -99,17 +103,11 @@ void loop()
 
    //--Funcion que activa la bomba de agua mediante el rele--
   releBombaAgua();
-
   
   //-- funcion logicaDeControl--
   logicaDeControl();
+ 
 
- 
-  
-  //--invocamos a la funcion que nos muestra los valored del dht11 y el sensor de agua
-  outputLcd();
- 
-  
 
   //delay de control de sistema para no tener problema
   delay(200);

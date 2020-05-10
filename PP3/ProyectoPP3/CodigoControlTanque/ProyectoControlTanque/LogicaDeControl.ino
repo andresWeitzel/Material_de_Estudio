@@ -3,7 +3,7 @@
 
 //Funcion para la logica de Control
 void logicaDeControl(){
-
+/*
   //--Invocamos a la funcion del ledNormal para destello
   if(temp <= 26 && limiteAgua <= 380){
    ledDestello();
@@ -17,7 +17,7 @@ void logicaDeControl(){
     ledAdvertenciaHigh();
     buzzerAdvertenciaHigh();
   } 
-
+*/
   /*
   El sensor de agua tiene una tiempo de recuperacion, por ende se le pasan rangos de medidas y no medidas exactas, dentro de esos rangos
   corresponden ciertas señales de advertencia, la medida mas alta de cada rango refiere al primer contacto con el agua, luego el sensado se
@@ -26,82 +26,21 @@ void logicaDeControl(){
 }
   
   
-  
-  
-  
-  
-  
-  
+/*
+//-----------------Variables-------------------------
+//--Calculo de volumen--
+float volumenMin=0.00;
+float volumenMax=1.50;
+float alturaMax=9.80;
+float alturaMin=18.79;
+float volumen=0.00;
+float tiempo,altura;//variables para el HC-SR04 
 
 
+*/
   
   
   
   
-  /*
-  //Variables para la logica de Control--
-int estadoActual=0;
-
-switch(estadoActual){
- 
-  case 1:   
-   //--Invocamos a la funcion del ledNormal para destello
-   if(temp <= 26 && limiteAgua <= 500){
-    ledDestello();
-    estadoActual++;
-    
-  }break;
-
-  case 2:
-  //--Invocamos a la funcion del ledAdvertencia junto con la funcion buzzerAdvertencia
-    if((temp >= 27 && temp <= 28) || limiteAgua >= 390){
-      ledAdvertenciaLow();
-      buzzerAdvertenciaLow();
-      estadoActual++;
-  }break;
-
-  case 3:
-    if((temp >= 29 && temp <= 30) || limiteAgua >= 450){
-      ledAdvertenciaMedium();
-      buzzerAdvertenciaMedium();
-      estadoActual++;
-  }break;
-
-  case 4:
-   if(temp >= 31 || limiteAgua >= 550){
-    ledAdvertenciaHigh();
-    buzzerAdvertenciaHigh();
-    estadoActual++;
-  }break;
   
   
-}*/
-
-
-
-
-
-/*int day = 4;
-switch (day) {
-  case 1:
-    cout << "Monday";
-    break;
-  case 2:
-    cout << "Tuesday";
-    break;
-  case 3:
-    cout << "Wednesday";
-    break;
-  case 4:
-    cout << "Thursday";
-    break;
-  case 5:
-    cout << "Friday";
-    break;
-  case 6:
-    cout << "Saturday";
-    break;
-  case 7:
-    cout << "Sunday";
-    break;
-}*/

@@ -1,95 +1,60 @@
+
+
 //--Variables para la Frecuencia--
-const int f1=540;
-const int f2=560;
-//--Variables para los delays--
-const int d1=100;
-const int d2=50;
-const int d3=30;
+  const int f1=540;
+  const int f2=560;
+  //--Variables para los delays--
+  const int d4=100;
+  const int d5=50;
+  const int d6=30;
 
-
+  
 //Funcion buzzer advertencia
 void buzzerAdvertenciaLow(){ 
-  tone(pinBuzzer,f1);//Prendemos buzzer
-  delay(d1);
-  noTone(pinBuzzer);//Apagamos buzzer
-  delay(d1);
-  tone(pinBuzzer,f1);
-  delay(d1);
-  noTone(pinBuzzer);
-  delay(d1);
-   tone(pinBuzzer,f1);
-  delay(d1);
-  noTone(pinBuzzer);
-  delay(d1);
-  
+
+  for(int i=0; i < 4; i++){//Repite 3 veces
+    tone(pinBuzzer,f1);//Prendemos buzzer
+    delay(d4);
+    noTone(pinBuzzer);//Apagamos buzzer
+    delay(d4);
+  }
+ 
 }
 
 void buzzerAdvertenciaMedium(){ 
- tone(pinBuzzer,f1);//Prendemos buzzer
-  delay(d2);
-  noTone(pinBuzzer);//Apagamos buzzer
-  delay(d2);
-  tone(pinBuzzer,f1);
-  delay(d2);
-  noTone(pinBuzzer);
-  delay(d2);
-   tone(pinBuzzer,f1);
-  delay(d2);
-  noTone(pinBuzzer);
-  delay(d2);
-   tone(pinBuzzer,f1);
-  delay(d2);
-  noTone(pinBuzzer);
-   tone(pinBuzzer,f1);
-  delay(d2);
-   noTone(pinBuzzer);  
+
+   for(int i=0; i < 4; i++){//Repite 5 veces
+    tone(pinBuzzer,f1);//Prendemos buzzer
+    delay(d5);
+    noTone(pinBuzzer);//Apagamos buzzer
+    delay(d5);
+  }
+
 }
 
 void buzzerAdvertenciaHigh(){ 
- tone(pinBuzzer,f2);//Prendemos buzzer
-  delay(d3);
+
+  for(int i=0; i < 11; i++){//Repite 11 veces
+    tone(pinBuzzer,f2);//Prendemos buzzer
+  delay(d6);
   noTone(pinBuzzer);//Apagamos buzzer
-  delay(d3);
-  tone(pinBuzzer,f2);
-  delay(d3);
-  noTone(pinBuzzer);
-  delay(d3);
-   tone(pinBuzzer,f2);
-  delay(d3);
-  noTone(pinBuzzer);
-  delay(d3);
-   tone(pinBuzzer,f2);
-  delay(d3);
-  noTone(pinBuzzer);
-  delay(d3);
-   tone(pinBuzzer,f2);
-  delay(d3);
-   noTone(pinBuzzer);
-   delay(d3);
-   tone(pinBuzzer,f2);
-  delay(d3);
-  noTone(pinBuzzer);
-  delay(d3);
-   tone(pinBuzzer,f2);
-  delay(d3);
-   noTone(pinBuzzer);
-   delay(d3);
-   tone(pinBuzzer,f2);
-  delay(d3);
-  noTone(pinBuzzer);
-  delay(d3);
-   tone(pinBuzzer,f2);
-  delay(d3);
-   noTone(pinBuzzer);
-   delay(d3);
-    tone(pinBuzzer,f2);
-  delay(d3);
-   noTone(pinBuzzer);
-   delay(d3);
-    tone(pinBuzzer,f2);
-  delay(d3);
-   noTone(pinBuzzer);
-  
- 
+  delay(d6);
+  }
+
   
 }
+
+
+
+/*
+//-----------------Variables-------------------------
+//--Calculo de volumen--
+float volumenMin=0.00;
+float volumenMax=1.50;
+float alturaMax=9.80;
+float alturaMin=18.79;
+float volumen=0.00;
+float tiempo,altura;//variables para el HC-SR04 
+
+
+*/
