@@ -1,4 +1,4 @@
-/*PROYECTO SISTEMA DE CONTROL DE TANQUE*/
+ /*PROYECTO SISTEMA DE CONTROL DE TANQUE*/
 //---------------Librerias--------------------------
 
 //--Librerias Lcd--
@@ -40,7 +40,7 @@ float volumenMin=0.00;
 float volumenMax=1.50;
 float alturaMax=9.80;
 float alturaMin=18.79;
-float volumen=0.00;
+float volumen;
 float tiempo,altura;//variables para el HC-SR04 
 
 //unsigned int tiempo, distancia;//Variables de altura para el hc-sr04
@@ -86,30 +86,28 @@ pinMode(pinRele,OUTPUT);
 //************************************************************
 void loop()
 {
-    //--invocamos a la funcion que nos muestra los valores en la pantalla lcd
-  outputLcd();
-  
+   
   //--Funcion del sensor ultrasonico--
    sensorHCSR04();
 
-  //--Funcion de volumen del tanque--
-  volumenTanque();
-  
   //--Funcion del sensor dht11--
   sensorDHT11();
 
   //--Funcion del sensor de Agua--
   sensorAgua();
 
-   //--Funcion que activa la bomba de agua mediante el rele--
+
+  //--Funcion que activa la bomba de agua mediante el rele--
   releBombaAgua();
+
+  
+  //--Funcion de volumen del tanque--
+  volumenTanque();
   
   //-- funcion logicaDeControl--
-  logicaDeControl();
- 
+  controlMonitoreo();
 
-
-  //delay de control de sistema para no tener problema
+  //Delay de control de sistema para no tener problema
   delay(200);
   
   

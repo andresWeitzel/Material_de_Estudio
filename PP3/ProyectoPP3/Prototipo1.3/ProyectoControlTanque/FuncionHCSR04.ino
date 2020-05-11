@@ -20,6 +20,7 @@ void sensorHCSR04(){
   altura=tiempo / 58;//modificado
  
   // ENVIAR EL RESULTADO AL MONITOR SERIAL
+  Serial.print("La altura es:");
   Serial.print(altura);
   Serial.println(" cm");
   //delay(200);

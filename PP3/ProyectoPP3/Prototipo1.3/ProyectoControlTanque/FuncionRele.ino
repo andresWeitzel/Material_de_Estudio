@@ -5,7 +5,6 @@ void releBombaAgua(){
 if(altura >= alturaMax){
   digitalWrite(pinRele,HIGH);
    
-  
 }else{
   digitalWrite(pinRele,LOW);
 }

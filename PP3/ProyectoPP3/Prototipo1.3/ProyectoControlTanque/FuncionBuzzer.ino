@@ -23,7 +23,7 @@ void buzzerAdvertenciaLow(){
 
 void buzzerAdvertenciaMedium(){ 
 
-   for(int i=0; i < 4; i++){//Repite 5 veces
+   for(int i=0; i < 5; i++){//Repite 5 veces
     tone(pinBuzzer,f1);//Prendemos buzzer
     delay(d5);
     noTone(pinBuzzer);//Apagamos buzzer
