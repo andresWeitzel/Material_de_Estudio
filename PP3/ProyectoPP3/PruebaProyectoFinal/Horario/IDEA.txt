@@ -1,0 +1,16 @@
+Se implementara un modulo de control adicional al ya existente en el proyecto, en el cual se incluye:
+-sensor dht11
+-buzzer
+-rtc
+-modulo display 7 seg
+-leds
+-sensor humo
+
+Funcionamiento-->
+Este modulo de control cada cierto periodo de tiempo programado(rtc) realizara un chequeo con todos los 
+sensores(temp y hum(tanque y sala de control),nivelultrasonico,nivellimite,humo, y los que haya) y esta informacion
+la almacenara en un tarjeta sd u otro alamacenamiento.El horario se mostrara de forma constante en un modulo display de 7 segmentos
+
+Sucinto-->El modulo rtc siempre tendra un tiempo constante una vez colocado el horario, mediante este se programa horarios para que se releve
+un control de datos y asi almacenarlos en una sd
+tm1637

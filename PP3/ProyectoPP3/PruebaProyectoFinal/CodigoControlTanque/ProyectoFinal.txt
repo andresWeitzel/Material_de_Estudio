@@ -1,0 +1,31 @@
+**Proyecto Control Tanque 2.0**
+
+--Tanque de agua--
+No se presentara modificaciones  por el hecho de ya tener 3 sensores en el mismo
+
+--Sala de Control--
+Se cambia el arduino uno por uno mega para manejar mayor cantidad de entradas
+
+Se añade un sensor dht11, un sensor de humo,un modulo RTC y un modulo SD hasta la fecha
+
+Se debera implementar un sistema de comunicacion/seguridad para la programacion y control del tanque mediante 
+un modulo de tecnologia rfid para la verificacion del operador de planta(seguridad) y un teclado matricial para luego 
+de haberse comprobado en el sistema poder hacer uso de los diferentes programas de control del tanque,llenado/vaciado.
+
+Se usara programacion estructurada para el seteo de varias rutinas de control, como por ejemplo llenado del
+tanque hasta un cierto limite en un cierto periodo de tiempo implementando los mudolos rtc y sd
+
+Cada cierto periodo de tiempo se implementa un relevo de control de sensados para recaudar informacion de la planta, 
+la misma sealmacenara en una tarjeta sd.
+
+El lcd muestra la temperatura, humedad, y voolumen previamente calculado a partir de  un sensor ultrasonico del tanque y
+muestra la temp. hum. y ppm de la sala de control junto con un desarrollo grafico para la correcta comunicaicon entre humano
+mquina.
+
+"Probablemente" en caso de la correcta puesta a prueba del sistema en general-->
+
+*Se implemente otra comunicacion a traves de internet con el modulo esp8266 con placa wifi para manejar 
+los datos de los sensores en tiempo real a traves de una base de datos en la nube y una aplicacion 
+web(logicamente previamente descargada).
+
+*Se utilice una base de datos local y una interfaz grafica para la manipulacion y visualizacion de los datos.
