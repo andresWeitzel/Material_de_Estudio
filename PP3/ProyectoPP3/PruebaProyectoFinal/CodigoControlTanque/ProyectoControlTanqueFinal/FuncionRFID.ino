@@ -1,3 +1,6 @@
+
+
+
 void accesoRFID(){
 /*
   byte ActualUID[4]; //almacenará el código del Tag leído

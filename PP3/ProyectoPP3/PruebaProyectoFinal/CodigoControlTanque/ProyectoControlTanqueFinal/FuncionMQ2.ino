@@ -1,4 +1,5 @@
 
+
 void detectorHumoMQ2(){
   
   deteccionHumo = analogRead(A5); 

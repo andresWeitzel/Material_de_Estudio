@@ -1,9 +1,4 @@
 
-
-//--Variables para los delays--
-  const int d1=1000;
-  const int d2=200;
-  const int d3=100;
   
 //--Funcion Destello Normal--
 void ledDestello(){

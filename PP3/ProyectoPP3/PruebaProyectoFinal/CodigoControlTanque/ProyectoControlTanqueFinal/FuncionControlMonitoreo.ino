@@ -13,21 +13,21 @@ void controlMonitoreo(){
    
   }else if((tempTanque >= 27 && tempTanque <= 28) || (limiteAgua >= 301 && limiteAgua <= 400 )){
     ledAdvertenciaLow();
-    buzzerAdvertenciaLow();
+    //buzzerAdvertenciaLow();
     outputLcdAdvertenciaLow();
     outputLcd(); 
     
     
   }else if((tempTanque >= 29 && tempTanque <= 30) || (limiteAgua >=401 && limiteAgua <= 469 )){ 
     ledAdvertenciaMedium();
-    buzzerAdvertenciaMedium();
+    //buzzerAdvertenciaMedium();
     outputLcdAdvertenciaMedium();
     outputLcd();
     
     
   }else if(tempTanque >= 31 || limiteAgua >=470){
     ledAdvertenciaHigh();
-    buzzerAdvertenciaHigh();
+    //buzzerAdvertenciaHigh();
     outputLcdAdvertenciaHigh();
     outputLcd();
    

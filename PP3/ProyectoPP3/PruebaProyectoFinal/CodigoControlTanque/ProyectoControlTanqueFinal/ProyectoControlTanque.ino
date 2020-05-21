@@ -1,5 +1,6 @@
  /*PROYECTO SISTEMA DE CONTROL DE TANQUE*/
-//---------------Librerias--------------------------
+ 
+//================Librerias=============================
 
 //--Librerias Lcd--
 #include<Wire.h> //i2c
@@ -18,8 +19,11 @@
 //--Librerias RTC---
 //#include <Wire.h>Esta incluida
 #include<RTClib.h>
+
+//--Libreria TM1637 display 7 segmentos--
+#include <TM1637.h>
  
-//---------------Constantes---------------------------
+//===============================Constantes====================================
 
 //--Constantes para pins HC-SR04--
 const int pinecho = 5;
@@ -28,7 +32,8 @@ const int pintrigger = 6;
 //--Constantes para filas columnas teclado matricial--
 const byte filasTeclado=4;
 const byte columnasTeclado=4;
-//------------------Variables--------------------------
+
+//===============================VariablesPines====================================
 
 //--Variables pines dht11 del tanque-
 int tempTanque,humTanque;
@@ -52,7 +57,6 @@ int pinBuzzer=4;
 //--Variable pin Rele--
 int pinRele=7;
 
-
 /*--PINES ANALOGICOS--
  * 
  * --ARDUINO UNO--
@@ -71,12 +75,15 @@ SDA=20
 
 */
 
-//--TECLADO MATRICIAL--
-char valorBotonKeypad;
-
 //--Variable pines para el teclado matricial--
 byte pinesFilaTeclado[]={22,23,24,25};//Usando el arduino Mega, son los 4 primeros cables de izq a derecha de la matriz
 byte pinesColumnaTeclado[]={26,27,28,29};//idem, los 4 cables que les siguen
+
+//===============================Variables====================================
+
+//--TECLADO MATRICIAL--
+char valorBotonKeypad;
+
 
 char botonesTeclado[filasTeclado][columnasTeclado]={//FILAS,COLUMNAS
   {'1','2','3','A'},
@@ -85,7 +92,7 @@ char botonesTeclado[filasTeclado][columnasTeclado]={//FILAS,COLUMNAS
   {'*','0','#','D'}
 };
 
-//--Variables volumen de agua--
+//--VOLUMEN DE AGUA--
 //--Calculo de volumen--
 float volumenMin=0.00;
 float volumenMax=1.50;
@@ -95,9 +102,24 @@ float volumen;
 float tiempo,altura;//variables para el HC-SR04 
 //unsigned int tiempo, distancia;//Variables de altura para el hc-sr04
 
+//--BUZZER Y LEDS--
+//--Variables para la Frecuencia del Buzzer--
+  const int f1=540;
+  const int f2=560;
+  //--Variables para los delays--
+  const int d1=1000;
+  const int d2=200;
+  const int d3=100;
+  const int d4=100;
+  const int d5=50;
+  const int d6=30;
+
+ //--Variables RTC--
+int dia,mes,anio,hora,minuto,segundo;
+ 
 
 
-//------------------Objetos---------------------------
+//===============================Objetos====================================
 
 //--Objeto Lcd--
 LiquidCrystal_I2C lcd(0x27, 16, 2);  // Inicia el LCD en la dirección 0x27, con 16 caracteres y 2 líneas
@@ -119,7 +141,9 @@ MFRC522 mfrc522(8,9);//PIN RST, PIN SS
 //--Objeto RTC DS3231--
 RTC_DS3231 rtc;
 
-//----------------------------------------------
+//--Objeto Display7segmentos--
+TM1637 displaySegmentos(15,14);//CLK,DIO
+
 
 //*********************************************************
 //*******************SETUP*********************************
@@ -128,8 +152,7 @@ void setup()
 {
   Serial.begin(9600);//Monitor Serial para testeo
   
-//------------------Objetos------------------------------
-
+//===============================ObjetosSetup====================================
   //--DHT--
   dhtTanque.begin();
   dhtSalaControl.begin();
@@ -149,7 +172,15 @@ void setup()
  Serial.println("No hay un módulo RTC");
  while (1);
  }
-//------------------Pines---------------------------------
+
+//--Display 7 segmentos--
+displaySegmentos.set();//Seteamos el display con alsa configuraciones que lepasamso
+displaySegmentos.init();//Iniciamos el display
+
+
+
+ 
+//===============================PinesSetup====================================
 //--Configuramos los pines de los leds--
 pinMode(pinLedNormal,OUTPUT);        
 pinMode(pinLedAdvertencia,OUTPUT);        
@@ -191,6 +222,9 @@ void loop()
 
   //--Funcion de volumen del tanque--
   volumenTanque();
+
+  //--fUNCON DISPLAY 7 SEGMENTOS--
+  displaySegmentosTM1637();
 
    //--Funcion keyPad()--
   //keyPad();

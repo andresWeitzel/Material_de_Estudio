@@ -1,3 +1,4 @@
+
 void horarioRTC(){
   
    // Ponemos en hora, solo la primera vez, luego comentar y volver a cargar.
@@ -5,22 +6,27 @@ void horarioRTC(){
  // January 21, 2014 at 3am you would call:
 // rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));
  //rtc.adjust(DateTime(2020,05,15,21,07,0));
+  
+ DateTime now = rtc.now();
 
-  
-  
-  DateTime now = rtc.now();
+ dia=now.day();
+ mes=now.month();
+ anio=now.year();
+ hora=now.hour();
+ minuto=now.minute();
+ segundo=now.second();
  
- Serial.print(now.day());
+ Serial.print(dia);
  Serial.print('/');
- Serial.print(now.month());
+ Serial.print(mes);
  Serial.print('/');
- Serial.print(now.year());
+ Serial.print(anio);
  Serial.print(" ");
- Serial.print(now.hour());
+ Serial.print(hora);
  Serial.print(':');
- Serial.print(now.minute());
+ Serial.print(minuto);
  Serial.print(':');
- Serial.print(now.second());
+ Serial.print(segundo);
  Serial.println();
  delay(3000);
 }

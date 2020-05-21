@@ -1,15 +1,6 @@
 
-  
 
-//--Variables para la Frecuencia--
-  const int f1=540;
-  const int f2=560;
-  //--Variables para los delays--
-  const int d4=100;
-  const int d5=50;
-  const int d6=30;
 
-  
 //Funcion buzzer advertencia
 void buzzerAdvertenciaLow(){ 
 
