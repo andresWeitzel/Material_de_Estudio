@@ -1,0 +1,6 @@
+1)Para realizar la descarga de los archivos que se deseen, entrar a los mismos 
+y en la derecha clickear DOWLOAD, en la misma pestaña donde se abra el archivo,previo a la descarga, aparece en la parte izquierda
+el tamaño del archivo para referencia, si este no se puede descargar libere espacio en el dispositivo donde descarga los archivos
+
+2)Los ejercicios estan resueltos en subcarpetas en relacion al tema tratado y los mismos se podran descargar de la forma detallada
+en el punto anterior
