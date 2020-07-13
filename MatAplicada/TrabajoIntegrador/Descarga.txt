@@ -1,0 +1,8 @@
+//////////Pasos para la Descarga de Archivos////////
+
+1)Todos los archivos se encuentran comprimidos en TrabajoIntegrador.rar, entrar en este directorio y 
+a la derecha clickear en dowload, descomprimir y visualizar
+
+3)Si se requiere visualizar el tp online el mismo esta separado por ejercicios por carpetas
+
+El tamaño total del archivo .rar es de 15.7 MB.
