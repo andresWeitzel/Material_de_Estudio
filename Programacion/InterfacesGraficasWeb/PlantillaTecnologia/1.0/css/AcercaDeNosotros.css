@@ -1,0 +1,39 @@
+/*Body*/
+
+body {
+    background-color: black;
+}
+
+
+/*Fin Body*/
+
+
+/*Navbar*/
+
+nav div.navbar-nav {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    margin-left: auto;
+    text-align: center;
+}
+
+nav div.navbar-nav img {
+    width: 60px;
+    height: 60px;
+}
+
+
+/*Fin Navbar*/
+
+
+/*Slice*/
+
+section.slider {
+    background: url("../images/Network-connection-web-cable-light_1920x1200.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*Fin Slice*/

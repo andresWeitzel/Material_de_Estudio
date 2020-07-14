@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantillla Web 1.0</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link href="../css/blog.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+    <!--Nav-->
+    <nav class="navbar-nav navbar-expand-md navbar-dark bg-dark sticky-top">
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <div class="navbar-nav ">
+                <a class="nav-link" href="../index.html">Inicio</a>
+                <a class="nav-link active" href="../html/blog.html">Blog</a>
+                <a class="nav-link" href="../html/Servicios.html">Servicios</a>
+                <a class="nav-link" href="../html/AcercaDeNosotros.html">Acerca de Nosotros</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contenido
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="../html/blog.html">Temas de Programacion</a>
+                    <a class="dropdown-item" href="../html/blog.html">Temas de Redes</a>
+                    <a class="dropdown-item" href="../html/blog.html">Temas de Hacking</a>
+                    <a class="dropdown-item" href="../html/blog.html">Temas de Electronica</a>
+                    <a class="dropdown-item" href="../html/blog.html">Otros</a>
+                </div>
+            </div>
+            <!--Busqueda-->
+            <div class="busqueda">
+                <form class="form-inline my-2 my-lg-0 ml-4 mr-4">
+                    <input class="form-control  mr-sm-2" type="search" placeholder="Introducir algo" aria-label="Search">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal">
+             Buscar
+             </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Evento no disponible </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">Proximamente!</span>
+                            </button>
+                                </div>
+                                <div class="modal-body">
+                                    Esta funcion se tratara en las siguientes versiones!
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Modal-->
+                </form>
+            </div>
+
+            <!--Fin Busqueda-->
+        </div>
+        <!--Boton despliegue formato movil-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Fin Boton despliegue formato movil-->
+    </nav>
+    </div>
+    <!--Fin Nav-->
+
+
+    <!--Slice-->
+    <section class="container-fluid slider d-flex justify-content-center ">
+
+        <!--Collapse1-->
+        <section id="collapse1">
+            <div class="accordion" id="accordionSeguridadInformatica">
+                <div class="card ">
+                    <h2 id="titulo">Seguridad Informatica</h2>
+                    <div class="card-header" id="headingPishing">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapsePhishing" aria-expanded="false" aria-controls="collapsePhishing">
+                            Phishing
+              </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapsePhishing" class="collapse show" aria-labelledby="headingPishing" data-parent="#accordionSeguridadInformatica">
+                        <div class="card-body">
+                            El término Phishing es relativamente nuevo, y su creación data de mediados de 1996, por los crackers que practicaban el robo de cuentas de America Online (AOL), defraudando las contraseñas de los usuarios. Su primera mención pública se produjo en el blackhat
+                            grupo alt.2600, el 28 de enero del mismo año de su creación, hecha por el mk590 usuario, quien dijo: "Lo que sucede es que en el pasado, podías crear una cuenta falsa de AOL, una vez que tenías un generador de tarjeta de crédito.
+                            Sin embargo, AOL era inteligente. Ahora, después de ingresar los detalles de la tarjeta, ya está hecho consulte con su banco. ¿Alguien más sabe de otra forma de adquirir una cuenta que no sea a través del phishing? " Solo un
+                            año después, en 1997, el término fue citado en los medios. En ese mismo año, los phishing (cuentas pirateadas) ya se usaban como moneda en el mundo de los piratas informáticos, y 10 phishing de AOL se podían intercambiar fácilmente
+                            por un software malicioso. El phishing, anteriormente utilizado para robar cuentas de usuarios de America Online, hoy tiene aplicaciones mucho más grandes y oscuras, como el robo de dinero de cuentas bancarias.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingMalware">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseMalware" aria-expanded="false" aria-controls="collapseMalware">
+                                Malware
+              </button>
+                        </h2>
+                    </div>
+                    <div id="collapseMalware" class="collapse" aria-labelledby="headingMalware" data-parent="#accordionSeguridadInformatica">
+                        <div class="card-body">
+                            Dentro del código del malware podemos tener código destinado a aportantes distintos tipos de funcionalidades: La carga útil. Es la parte del código relacionada con la actividad maliciosa que realiza el malware. Por tanto esta parte es obligatoria.18​
+                            Opcionalmente el malware puede tener código para su distribución automática, se le llama reproducción, que propaga el malware a otras ubicaciones. Por tanto la infección por el malware puede ser directa, por ejemplo a través
+                            de la ejecución de programas descargados de la red, o a través de esta reproducción automática. Opcionalmente el malware puede tener un código útil para el usuario destinado a ocultar la funcionalidad verdadera del software.
+                            Es típico ocultar el malware en plugins o programas de utilidad básica como salvapantallas. A los malware que tienen este componente se les llama troyanos. Opcionalmente el malware puede tener código destinado a ocultar la
+                            actividad maliciosa realizada.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingRansomware">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseRansomware" aria-expanded="false" aria-controls="collapseRansomware">
+               Ransomware
+              </button>
+                        </h2>
+                    </div>
+                    <div id="collapseRansomware" class="collapse" aria-labelledby="headingRansomware" data-parent="#accordionSeguridadInformatica">
+                        <div class="card-body">
+                            El atacante camufla el código malicioso dentro de otro archivo o programa apetecible para el usuario que invite a hacer clic. Algunos ejemplos de estos camuflajes serían: Archivos adjuntos en correos electrónicos. Vídeos de páginas de dudoso origen. Actualizaciones
+                            de sistemas. Programas, en principio, fiables como Windows o Adobe Flash. Luego, una vez que ha penetrado en el ordenador, el ransomware se activa y provoca el bloqueo de todo el sistema operativo, lanza el mensaje de advertencia
+                            con la amenaza y el importe del rescate que se ha de pagar para recuperar toda la información. Además, en ocasiones incluyen en la amenaza la dirección IP, la compañía proveedora de Internet y hasta una fotografía captada desde
+                            la cámara web.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingExploit">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseExploit" aria-expanded="false" aria-controls="collapseExploit">
+                   Exploit
+                  </button>
+                            </h2>
+                        </div>
+                        <div id="collapseExploit" class="collapse" aria-labelledby="headingExploit" data-parent="#accordionSeguridadInformatica">
+                            <div class="card-body">
+                                Según la forma en la que el exploit contacta con el software vulnerable:4​ Exploit remoto. Si utiliza una red de comunicaciones para entrar en contacto con el sistema víctima. Por ejemplo puede usar otro equipo dentro de la misma red interna o tener acceso
+                                desde la propia Internet. Exploit local. Si para ejecutar el exploit se necesita tener antes acceso al sistema vulnerable. Por ejemplo el exploit puede aumentar los privilegios del que lo ejecuta. Este tipo de exploits
+                                también puede ser utilizado por un atacante remoto que ya tiene acceso a la máquina local mediante un exploit remoto. Exploit en cliente.1​ Aprovechan vulnerabilidades de aplicaciones que típicamente están instaladas en
+                                gran parte de las estaciones de trabajo de las organizaciones. Ejemplos típicos de este tipo de software son aplicaciones ofimáticas (p. ej. Microsoft Office, Open Office), lectores de PDF (p. ej. Adobe Acrobat Reader),
+                                navegadores (p. ej. Internet Explorer, Firefox, Chrome, Safari), reproductores multimedia (p. ej. Windows Media Player, Winamp, iTunes). El exploit está dentro de ficheros interpretados por este tipo de aplicaciones y que
+                                llega a la máquina objetivo por distintos medios (p. ej. mediante un correo o en una memoria USB). El archivo será usado por el programa y si no es detenido por ningún otro programa (p. ej. cortafuegos o antivirus) aprovechará
+                                la vulnerabilidad de seguridad. Las peculiaridades de este tipo de ataques son: Requieren la intervención del usuario del lado del cliente. Por ejemplo, necesitan que abra cierto archivo o que haga clic en cierto enlace
+                                Es un ataque asincrónico porque el momento en que se lanza no es el mismo en que se consigue ejecutar el exploit (ya que necesita la acción del usuario). Se lanza a ciegas, no se sabe qué aplicaciones y versiones de esta
+                                utiliza el objetivo real. Según el propósito de su ataque:4​ Curiosidad Fama personal Beneficio personal Espionaje
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingSniffer">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSniffer" aria-expanded="false" aria-controls="collapseSniffer">
+                        Sniffer
+                      </button>
+                                </h2>
+                            </div>
+                            <div id="collapseSniffer" class="collapse" aria-labelledby="headingSniffer" data-parent="#accordionSeguridadInformatica">
+                                <div class="card-body">
+                                    Los principales usos que se le pueden dar son: Captura automática de contraseñas enviadas en claro y nombres de usuario de la red. Esta capacidad es utilizada en muchas ocasiones por crackers para atacar sistemas a posteriori. Conversión del tráfico de
+                                    red en un formato inteligible por los humanos. Análisis de fallos para descubrir problemas en la red, tales como: ¿por qué el ordenador A no puede establecer una comunicación con el ordenador B? Medición del tráfico,
+                                    mediante el cual es posible descubrir cuellos de botella en algún lugar de la red. Detección de intrusos, con el fin de descubrir hackers. Aunque para ello existen programas específicos llamados IDS (Intrusion Detection
+                                    System, Sistema de Detección de intrusos), estos son prácticamente analizadores con funcionalidades específicas. Creación de registros de red, de modo que los hackers no puedan detectar que están siendo investigados.
+                                    Para los desarrolladores, en aplicaciones cliente-servidor. Les permite analizar la información real que se transmite por la red.
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingKeylogger">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseKeylogger" aria-expanded="false" aria-controls="collapseKeylogger">
+                                            Keylogger
+                          </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseKeylogger" class="collapse" aria-labelledby="headingKeylogger" data-parent="#accordionSeguridadInformatica">
+                                    <div class="card-body">
+                                        Un keylogger (derivado del inglés: key ('tecla') y logger ('registrador'); 'registrador de teclas') es un tipo de software o un dispositivo hardware específico que se encarga de registrar las pulsaciones que se realizan en el teclado, para posteriormente
+                                        memorizarlas en un fichero o enviarlas a través de internet.1​ Suele usarse como malware del tipo daemon, permitiendo que otros usuarios tengan acceso a contraseñas importantes, como los números de una tarjeta de
+                                        crédito, u otro tipo de información privada que se quiera obtener. El registro de lo que se teclea puede hacerse tanto con medios de hardware como de software. Los sistemas comerciales disponibles incluyen dispositivos
+                                        que pueden conectarse al cable del teclado (lo que los hace inmediatamente disponibles pero visibles si un usuario revisa el teclado) y al teclado mismo (que no se ven pero que se necesita algún conocimiento de
+                                        como soldarlos para instalarlos en el teclado). Escribir aplicaciones para realizar keylogging es trivial y, como cualquier programa computacional, puede ser distribuido a través de un troyano o como parte de un
+                                        virus informático o gusano informático. Incluso puede alterar las búsquedas en Google, creando búsquedas inexistentes y otras páginas adicionales. Se suele descargar comprimido para eludir antivirus. Se dice que
+                                        se puede utilizar un teclado virtual para evitar esto, ya que sólo requiere clics del ratón. Sin embargo, las aplicaciones más nuevas también registran screenshots (capturas de pantalla) al realizarse un clic, que
+                                        anulan la seguridad de esta medida.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+        <!--Fin collapse1-->
+        <!--Collapse2-->
+        <section id="collapse2">
+            <div class="accordion" id="accordionRedes">
+                <div class="card ">
+                    <h2 id="titulo">Redes</h2>
+                    <div class="card-header" id="headingIPv4">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseIPv4" aria-expanded="false" aria-controls="collapseIPv4">
+                                IPv4
+              </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseIPv4" class="collapse show" aria-labelledby="headingIPv4" data-parent="#accordionRedes">
+                        <div class="card-body">
+                            El Protocolo de Internet versión 4 (en inglés, Internet Protocol version 4, IPv4), es la cuarta versión del Internet Protocol (IP), un protocolo de interconexión de redes basados en Internet, y que fue la primera versión implementada en 1983 para la producción
+                            de ARPANET. Definida en el RFC 791, el IPv4 usa direcciones de 32 bits, limitadas a {\displaystyle 2^{32}}2^{{32}} = 4 294 967 296 direcciones únicas, muchas de las cuales están dedicadas a redes locales (LAN).1​ Por el crecimiento
+                            enorme que ha tenido Internet (mucho más de lo que esperaba, cuando se diseñó IPv4), combinado con el hecho de que hay desperdicio de direcciones en muchos casos (consultar las secciones que siguen), ya hace varios años se
+                            observó que escaseaban las direcciones IPv4. Esta limitación ayudó a estimular el estudio sobre la factibilidad de implantación de un nuevo protocolo IPv6, que en el año 2016 ya está en las primeras fases de pruebas, y que
+                            se espera que termine reemplazando a actual protocolo IPv4. Véase que las direcciones disponibles en la reserva global de IANA pertenecientes al protocolo IPv4 se agotaron oficialmente el lunes 31 de enero de 2011.2​ Los Registros
+                            Regionales de Internet deben, desde ahora, manejarse con sus propias reservas, que se estima, alcanzarán hasta el año 2020, y no por mucho más tiempo.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingIPv6">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseIPv6" aria-expanded="false" aria-controls="collapseIPv6">
+                                IPv6
+              </button>
+                        </h2>
+                    </div>
+                    <div id="collapseIPv6" class="collapse" aria-labelledby="headingIPv6" data-parent="#accordionRedes">
+                        <div class="card-body">
+                            El IPv6 es una actualización al protocolo IPv4, diseñado para resolver el problema de agotamiento de direcciones. Su desarrollo comenzó en diciembre de 1998 cuando Steve Deering y Robert Hinden, empleados de Cisco y Nokia publicaron una especificación
+                            formal del protocolo a través de un RFC1​2​ y aún continua su implementación. Diseñado por Steve Deering de Xerox PARC IPv6 está destinado a sustituir a IPv4,[cita requerida] cuyo límite en el número de direcciones de red admisibles
+                            está empezando a restringir el crecimiento de Internet y su uso, especialmente en China, India, y otros países asiáticos densamente poblados. El nuevo estándar busca mejorar el servicio globalmente; por ejemplo, proporcionando
+                            a futuras celdas telefónicas y dispositivos móviles con sus direcciones propias y permanentes. IPv4 posibilita 4 294 967 296 (232) direcciones de dispositivos diferentes, un número menor a la población mundial, y menor a la
+                            cantidad de dispositivos totales. A principios de 2010, quedaban menos del 10 % de IP sin asignar.3​ En la semana del 3 de febrero de 2011,4​ la IANA (Agencia Internacional de Asignación de Números de Internet, por sus siglas
+                            en inglés) entregó el último bloque de direcciones disponibles (33 millones) a la organización encargada de asignar IPs en Asia, un mercado que está en auge y no tardará en consumirlas todas. En cambio, IPv6 admite 340 282
+                            366 920 938 463 463 374 607 431 768 211 456 (2128 o 340 sextillones de direcciones), cerca de 6,7 × 1017 (670 mil billones) de direcciones por cada milímetro cuadrado de la superficie de la Tierra.5​
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTelnet">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTelnet" aria-expanded="false" aria-controls="collapseTelnet">
+                                Telnet
+              </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTelnet" class="collapse" aria-labelledby="headingTelnet" data-parent="#accordionRedes">
+                        <div class="card-body">
+                            Telnet (Teletype Network1​) es el nombre de un protocolo de red que nos permite acceder a otra máquina para manejarla remotamente como si estuviéramos sentados delante de ella. También es el nombre del programa informático que implementa el cliente. Para
+                            que la conexión funcione, como en todos los servicios de Internet, la máquina a la que se acceda debe tener un programa especial que reciba y gestione las conexiones. El puerto que se utiliza generalmente es el 23. Telnet sólo
+                            sirve para acceder en modo terminal, es decir, sin gráficos, pero es una herramienta muy útil para arreglar fallos a distancia, sin necesidad de estar físicamente en el mismo sitio que la máquina que los tenga. También se usaba
+                            para consultar datos a distancia, como datos personales en máquinas accesibles por red, información bibliográfica, etc. Aparte de estos usos, en general telnet se ha utilizado (y aún hoy se puede utilizar en su variante SSH)
+                            para abrir una sesión con una máquina UNIX, de modo que múltiples usuarios con cuenta en la máquina, se conectan, abren sesión y pueden trabajar utilizando esa máquina. Es una forma muy usual de trabajar con sistemas UNIX.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingSSH">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSSH" aria-expanded="false" aria-controls="collapseSSH">
+                   SSH
+                  </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSSH" class="collapse" aria-labelledby="headingSSH" data-parent="#accordionRedes">
+                            <div class="card-body">
+                                SSH (o Secure SHell) es el nombre de un protocolo y del programa que lo implementa cuya principal función es el acceso remoto a un servidor por medio de un canal seguro en el que toda la información está cifrada. Además de la conexión a otros dispositivos,
+                                SSH permite copiar datos de forma segura (tanto archivos sueltos como simular sesiones FTP cifradas), gestionar claves RSA para no escribir contraseñas al conectar a los dispositivos y pasar los datos de cualquier otra
+                                aplicación por un canal seguro tunelizado mediante SSH y también puede redirigir el tráfico del (Sistema de Ventanas X) para poder ejecutar programas gráficos remotamente. El puerto TCP asignado es el 22. SSH trabaja de
+                                forma similar a como se hace con telnet. La diferencia principal es que SSH usa técnicas de cifrado que hacen que la información que viaja por el medio de comunicación vaya de manera no legible, evitando que terceras personas
+                                puedan descubrir el usuario y contraseña de la conexión ni lo que se escribe durante toda la sesión; aunque es posible atacar este tipo de sistemas por medio de ataques de REPLAY y manipular así la información entre destinos.
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingVPN">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseVPN" aria-expanded="false" aria-controls="collapseVPN">
+                        VPN
+                      </button>
+                                </h2>
+                            </div>
+                            <div id="collapseVPN" class="collapse" aria-labelledby="headingVPN" data-parent="#accordionRedes">
+                                <div class="card-body">
+                                    Una red privada virtual (RPV) (en inglés, Virtual Private Network, VPN) es una tecnología de red de ordenadores que permite una extensión segura de la red de área local (LAN) sobre una red pública o no controlada como Internet. Permite que el ordenador
+                                    en la red envíe y reciba datos sobre redes compartidas o públicas como si fuera una red privada, con toda la funcionalidad, seguridad y políticas de gestión de una red privada.1​ Esto se realiza estableciendo una conexión
+                                    virtual punto a punto mediante el uso de conexiones dedicadas, cifrado o la combinación de ambos métodos.[1][cita requerida] Ejemplos comunes son la posibilidad de conectar dos o más sucursales de una empresa utilizando
+                                    como vínculo Internet, permitir a los miembros del equipo de soporte técnico la conexión desde su casa al centro de cómputo o bien que un usuario pueda acceder a su equipo doméstico desde un sitio remoto, como por ejemplo
+                                    un hotel. Todo ello utilizando la infraestructura de Internet.[cita requerida]
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingProxy">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseProxy" aria-expanded="false" aria-controls="collapseProxy">
+                                            Servidor proxy
+                          </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseProxy" class="collapse" aria-labelledby="headingProxy" data-parent="#accordionRedes">
+                                    <div class="card-body">
+                                        Un proxy, o servidor proxy, en una red informática, es un servidor —programa o dispositivo—, que hace de intermediario en las peticiones de recursos que realiza un cliente (A) a otro servidor (C). Por ejemplo, si una hipotética máquina A solicita un recurso
+                                        a C, lo hará mediante una petición a B, que a su vez trasladará la petición a C; de esta forma C no sabrá que la petición procedió originalmente de A. Esta situación estratégica de punto intermedio le permite ofrecer
+                                        diversas funcionalidades: control de acceso, registro del tráfico, restricción a determinados tipos de tráfico, mejora de rendimiento, anonimato de la comunicación, caché web, etc. Dependiendo del contexto, la intermediación
+                                        que realiza el proxy puede ser considerada por los usuarios, administradores o proveedores como legítima o delictiva y su uso es frecuentemente discutido
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+        <!--Fin collapse2-->
+        <!--Collapse3-->
+        <section id="collapse3">
+            <div class="accordion  " id="accordionProgramacion">
+                <div class="card ">
+                    <h2 id="titulo">Programacion</h2>
+                    <div class="card-header" id="headingDiseñoDeSoftware">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseDiseñoDeSoftware" aria-expanded="true" aria-controls="collapseDiseñoDeSoftware">
+                                Diseño de software
+              </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseDiseñoDeSoftware" class="collapse show" aria-labelledby="headingDiseñoDeSoftware" data-parent="#accordionProgramacion">
+                        <div class="card-body">
+                            El diseño de software es el proceso de visionado y definición de soluciones software a uno o más conjuntos de problemas. Uno de los componentes principales del diseño de software es el análisis de requisitos del software (ARS, del inglés SRA). Se trata
+                            de una parte del proceso de desarrollo de software que enumera especificaciones empleadas en ingeniería de software. Si el software está "automatizado" o centrado en el usuario, el diseño de software puede implicar también
+                            el diseño de experiencia de usuario que utiliza un storyboard o guion gráfico para ayudar determinar esas especificaciones. Si el software es completamente automatizado (es decir, sin usuario o interfaz de usuario), un diseño
+                            de software puede ser tan sencillo como un diagrama de flujo o un texto describiendo una secuencia planeada de acontecimientos. También hay métodos semiestándares como el Lenguaje Unificado de Modelado (UML) y conceptos fundamentales
+                            de modelado. En cualquier caso, normalmente alguna documentación del plan resulta como producto del diseño. Además, un diseño de software puede ser independiente de la plataforma o específico de la plataforma, dependiendo de
+                            la disponibilidad de la tecnología utilizada para el diseño.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingCompilador">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseCompilador" aria-expanded="false" aria-controls="collapseCompilador">
+                                Compilador
+              </button>
+                        </h2>
+                    </div>
+                    <div id="collapseCompilador" class="collapse" aria-labelledby="headingCompilador" data-parent="#accordionProgramacion">
+                        <div class="card-body">
+                            Un compilador es un tipo de traductor que transforma un programa entero de un lenguaje de programación (llamado código fuente) a otro.1​ Usualmente el lenguaje objetivo es código máquina, aunque también puede ser traducido a un código intermedio (bytecode)
+                            o a texto. A diferencia de los intérpretes, los compiladores reúnen diversos elementos o fragmentos en una misma unidad (un programa ejecutable o una librería), que puede ser almacenada y reutilizada. Este proceso de traducción
+                            se conoce como compilación.2 La construcción de un compilador involucra la división del proceso en una serie de fases que variará con su complejidad. Generalmente estas fases se agrupan en dos tareas: el análisis del programa
+                            fuente y la síntesis del programa objeto
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingCliente-servidor">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseCliente-servidor" aria-expanded="false" aria-controls="collapseCliente-servidor">
+                                Cliente-servidor
+              </button>
+                        </h2>
+                    </div>
+                    <div id="collapseCliente-servidor" class="collapse" aria-labelledby="headingCliente-servidor" data-parent="#accordionProgramacion">
+                        <div class="card-body">
+                            La arquitectura cliente-servidor es un modelo de diseño de software en el que las tareas se reparten entre los proveedores de recursos o servicios, llamados servidores, y los demandantes, llamados clientes. Un cliente realiza peticiones a otro programa,
+                            el servidor, quien le da respuesta. Esta idea también se puede aplicar a programas que se ejecutan sobre una sola computadora, aunque es más ventajosa en un sistema operativo multiusuario distribuido a través de una red de
+                            computadoras. Algunos ejemplos de aplicaciones cosas que usen el modelo cliente-servidor son el Correo electrónico, un Servidor de impresión y la World Wide Web. En esta arquitectura la capacidad de proceso está repartida entre
+                            los clientes y los servidores, aunque son más importantes las ventajas de tipo organizativo debidas a la centralización de la gestión de la información y la separación de responsabilidades, lo que facilita y clarifica el diseño
+                            del sistema.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingProgramacionPorCapas">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramacionPorCapas" aria-expanded="false" aria-controls="collapseProgramacionPorCapas">
+                                    Programación por capas
+                  </button>
+                            </h2>
+                        </div>
+                        <div id="collapseProgramacionPorCapas" class="collapse" aria-labelledby="headingProgramacionPorCapas" data-parent="#accordionProgramacion">
+                            <div class="card-body">
+                                La programación por capas es un modelo de desarrollo software en el que el objetivo primordial es la separación (desacoplamiento) de las partes que componen un sistema software o también una arquitectura cliente-servidor: lógica de negocios, capa de presentación
+                                y capa de datos. De esta forma, por ejemplo, es sencillo y mantenible crear diferentes interfaces sobre un mismo sistema sin requerirse cambio alguno en la capa de datos o lógica. La ventaja principal de este estilo es
+                                que el desarrollo se puede llevar a cabo en varios niveles y, en caso de que sobrevenga algún cambio, solo afectará al nivel requerido sin tener que revisar entre el código fuente de otros módulos, dado que se habrá reducido
+                                el Acoplamiento informático hasta una interfaz de paso de mensajes.
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingProgramacionFuncional">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramacionFuncional" aria-expanded="false" aria-controls="collapseProgramacionFuncional">
+                                        Programación funcional
+                      </button>
+                                </h2>
+                            </div>
+                            <div id="collapseProgramacionFuncional" class="collapse" aria-labelledby="headingProgramacionFuncional" data-parent="#accordionProgramacion">
+                                <div class="card-body">
+                                    En informática, la programación funcional es un paradigma de programación declarativa basado en el uso de verdaderas funciones matemáticas. En este estilo de programación las funciones son ciudadanas de primera clase, porque sus expresiones pueden ser
+                                    asignadas a variables como se haría con cualquier otro valor; además de que pueden crearse funciones de orden superior.1​ La programación funcional tiene sus raíces en el cálculo lambda, un sistema formal desarrollado
+                                    en los años 1930 para investigar la naturaleza de las funciones, la naturaleza de la computabilidad y su relación con la recursión. Los lenguajes funcionales priorizan el uso de recursividad y aplicación de funciones
+                                    de orden superior para resolver problemas que en otros lenguajes se resolverían mediante estructuras de control (por ejemplo, ciclos). Muchos lenguajes de programación funcionales pueden ser vistos como elaboraciones
+                                    del cálculo lambda.
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="heading ParadigmasDeProgramacion">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseParadigmasDeProgramacion" aria-expanded="false" aria-controls="collapseParadigmasDeProgramacion">
+                            Paradigmas de programacion
+                          </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseParadigmasDeProgramacion" class="collapse" aria-labelledby="headingParadigmasDeProgramacion" data-parent="#accordionProgramacion">
+                                    <div class="card-body">
+                                        Los programas se pueden clasificar por el paradigma del lenguaje que se use para producirlos. Los principales paradigmas son: imperativos, declarativos y orientación a objetos. Los programas que usan un lenguaje imperativo especifican un algoritmo, usan
+                                        declaraciones, expresiones y sentencias.7​ Una declaración asocia un nombre de variable con un tipo de dato, por ejemplo: var x: integer;. Una expresión contiene un valor, por ejemplo: 2 + 2 contiene el valor 4.
+                                        Finalmente, una sentencia debe asignar una expresión a una variable o usar el valor de una variable para alterar el flujo de un programa, por ejemplo: x := 2 + 2; if x == 4 then haz_algo();. Una crítica común en
+                                        los lenguajes imperativos es el efecto de las sentencias de asignación sobre una clase de variables llamadas "no locales".8​
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+        <!--Fin collapse3-->
+
+
+
+    </section>
+    <!--Fin Slice-->
+    <!--Section Jumbotron/footer-->
+    <section class="Jumbotron">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <!--Pagination-->
+                <nav aria-label="...">
+                    <ul class="pagination pagination-lg">
+                        <li class="page-item active" aria-current="page">
+                            <span class="page-link">
+                          1
+                          <span class="sr-only">(current)</span>
+                            </span>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    </ul>
+                </nav>
+                <!--Fin Pagination-->
+
+            </div>
+        </div>
+        </div>
+
+    </section>
+    <!--Fin Jumbotron/footer-->
+
+
+
+
+
+
+
+
+
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
