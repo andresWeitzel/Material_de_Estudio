@@ -1,0 +1,74 @@
+1. Reconocimiento 
+Whois 
+NS y MX 
+Transferencias de Zona 
+Fuerza bruta de DNS 
+Virtual Hosts 
+Geolocalización 
+Mapeo de IP a ASN 
+Shodan 
+Google Hacking 
+Obtener Direcciones de Email de un Dominio 
+Análisis de Metadatos 
+Cabeceras de Correos Electrónicos 
+
+2. Escaneo y Explotación 
+Detección de puertos abiertos 
+Detección de SO y Versiones de Software 
+Ejecución de Scripts para detección de vulnerabilidades 
+Transferencia de archivos con netcat 
+Conexión con shell de sistema 
+Shell Bind y Shell Inversa 
+CVE, CWE y CVSS 
+Descargar y usar exploits 
+Modificación de exploits 
+
+3. Metasploit 
+Msfconsole y configuración de la base de datos 
+Búsqueda de exploits 
+Selección y configuración de exploits 
+Selección y configuración de payloads 
+Explotación 
+Payloads staged vs non-staged 
+Manejo de sesiones y upgrade a Meterpreter 
+Migración de procesos 
+Gestión de archivos desde Meterpreter 
+Obtener información del sistema 
+Instalación de Keyloggers 
+
+4. Post Explotación 
+Saltar User Account Control 
+Persistencia 
+Elevación de Privilegios 
+Exploits Locales 
+Enumerar aplicaciones Instaladas 
+Obtener credenciales 
+Eliminación de Logs 
+Port Forwarding 
+Explotación a través de otro equipo 
+Metasploit resource files 
+Meterpreter resource files 
+
+5. Client Side Exploits 
+Payloads Ejecutables 
+Conectarnos con metasploit a una shell de netcat 
+Infección de ejecutables existentes con msfvenom 
+Payloads en VBS 
+Ataque a Internet Explorer 
+Ataque a Adobe PDF Reader 
+Payloads multiplataforma con Java 
+Explotación de EternalBlue 
+Migración de Meterpreter de 32bits a 64bits 
+Obtener credenciales desde la memoria 
+Volcar hashes de contraseñas 
+Crackear contraseñas con John The Ripper 
+
+6. Cracking Local y Remoto 
+Identificar tipo de hash 
+Utilizar Wordlists en John The Ripper 
+Reglas de Crackeo 
+Generación de diccionarios personalizados 
+Cracking de VNC 
+Cracking de POP3 
+Cracking de FTP 
+Cracking de SNMP

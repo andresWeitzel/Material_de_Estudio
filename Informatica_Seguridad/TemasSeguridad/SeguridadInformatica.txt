@@ -1,0 +1,31 @@
+1. Navegación Segura 
+Permisos de Usuarios 
+Permisos de Grupos 
+User Account Control (UAC) 
+Carpetas Compartidas 
+Backup 
+Recuperación 
+
+2. Seguridad Windows 
+Introducción 
+Local Security Policy 
+Política de Contraseñas 
+Introducción 
+Software Restriction Policy 
+AppLocker 
+------------------------------------------------------Comenzar----------------------------------------------
+3. Criptografía 
+Introducción 
+Hashes 
+Introducción 
+Cracking de Hashes 
+On The Fly Encryption 
+Gestión de Contraseñas 
+
+4. Malware 
+Introducción 
+Ejemplos de Malware 
+Software Antimalware 
+Introducción 
+Servicios de Análisis Online 
+Ransomware 
