@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ajax con PHP y JSON</title>
+    <script>
+        window.addEventListener("load", inicio);
+
+        function inicio() {
+            document.getElementById("mostrar").addEventListener("click", mostrar);
+        }
+
+        function mostrar() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var objeto = JSON.parse(this.responseText); //En caso de que sea correcta la peticion parciamos el json para poder trabajarlo en JS y llamamos al objeto
+
+                    //Mostramos los datos
+                    document.getElementById("parrafo").innerHTML = objeto.nombre + " nacio el " + objeto.nacimiento + " en " + objeto.pais;
+
+                    //Convertimos un objeto Js en una cadena jSON
+                    var cadena = JSON.stringify(objeto);
+                    document.getElementById("parrafo").innerHTML += " El objeto " + objeto + " en modo cadena es " + cadena;
+
+                }
+            }
+            xhr.open("GET", "ObjetoJson.php", true);
+            xhr.send();
+        }
+    </script>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <button id="mostrar">Mostrar</button>
+    <p id="parrafo"></p>
+    <script>
+    </script>
+</body>
+
+</html>

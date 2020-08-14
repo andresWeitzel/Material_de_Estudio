@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="texto">
+        <h1>Coleccion de CDs</h1>
+        <button id="CargaCatalogo">Cargar Catalogo</button>
+    </div>
+
+    <table id="demo"></table>
+
+    <script>
+        //NECESARIO UN SERVIDOR LOCAL PARA QUE FUNCIONE
+
+        document.getElementById("CargaCatalogo").addEventListener("click", CargaCatalogo);
+
+        function CargaCatalogo() {
+            //Creando objeto en AJAX
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+
+                if (this.readyState == 4 && this.status == 200) {
+                    cargarXML();
+                }
+
+            }
+            xhr.open("GET", "cd_catalogo.xml", true);
+            xhr.send(); //Al utilizar get no es necessario colocar un parametro
+        }
+
+        function cargarXML(xml) {
+            //Capturamos la respuesta que nos devolvera el servidor
+            var docXML = xml.responseXML;
+            var tabla = "<tr><th>Artista</th><th>Titulo</th></tr>";
+            var discos = docXML.getElementsByTagName("CD"); //Captura todos los elementos con etiquetas CD del array creado llamado discos
+            for (var i = 0; i < discos.length; i++) {
+                //Captura de cada uno de los discos el titulo y el artista
+                tabla += "<tr><td>";
+                tabla += discos[i].getElementsByTagName("ARTIST")[0].textContent;
+                tabla += "</td><td>";
+                tabla += discos[i].getElementsByTagName("TITLE")[0].textContent;
+                tabla += "</td></tr>";
+
+            }
+            document.getElementById("demo").innerHTML = tabla;
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cookies-Ejemplo Práctico</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <button type="button" id="VerCookies">Ver las cookies</button>
+
+    <button type="button" id="CrearCookie1">Crear cookie 1</button>
+    <button type="button" id="CrearCookie2">Crear cookie 2</button>
+
+    <button type="button" id="BorrarCookie1">Borrar cookie 1</button>
+    <button type="button" id="BorrarCookie2">Borrar cookie 2</button>
+
+    <script>
+        document.getElementById("VerCookies").addEventListener("click", Ver_Cookies); //Despues del "click" la VerCookies es una funcion 
+
+        document.getElementById("CrearCookie1").addEventListener("click", Crear_Cookie1);
+        document.getElementById("CrearCookie2").addEventListener("click", Crear_Cookie2);
+
+        document.getElementById("BorrarCookie1").addEventListener("click", Borrar_Cookie1);
+        document.getElementById("BorrarCookie2").addEventListener("click", Borrar_Cookie2);
+
+        function Ver_Cookies() {
+            alert(document.cookie);
+        }
+
+        function CrearCookie(e) { //El objeto 'e' es para extraer informacion deun evento 
+
+            if (!e) e = window.event; //si no sabemos de que tipo es el objeto 'e', entonces le asignamos                          el objeto windows,porque no sabemos con que navegador trabajaremos
+            if (e.target.id == "Crear_Cookie1")
+                document.cookie = "Nombre=Rodolfo";
+
+            else if (e.target.id == "Crear_Cookie2")
+                document.cookie = "Apellido=Perez";
+        }
+
+        function BorrarCookie(e) {
+            if (!e) e = window.event;
+
+            if (e.target.id == "Borrar_Cookie1")
+                document.cookie = "Nombre=;expires=Thu,01 Jan 1996 09:00:32 UTC;";
+
+            else if (e.target.id == "Borrar_Cookie2")
+                document.cookie = "Apellido=;expires=Thu,01 Jan 1996 09:00:32 UTC;";
+        }
+    </script>
+
+
+</body>
+
+</html>

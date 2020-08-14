@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        var api_web = "Desarrollo de aplicaciones web ";
+        var apps_phone = 'Desarrollo de aplicaciones moviles';
+        var adm_SI = "Administracion de'Sistemas Informaticos'en Red";
+        var iot = "Sistemas\"Conexion\" y Redes";
+        var modulos = new String("");
+
+        //-------------METODOS DE BUSQUEDA:-------------
+
+        //CHARAT(<NUM>):Devuelve el caracter de una posicion
+        alert("El caracter 16 de la cadena modulos es:", +modulos.charAt(16));
+
+        //INDEX0F(<CARACTER>):Devuelve la primera posicion de un caracter en una cadena.
+        alert("La primera aparicion de la letra A en la cadena modulos es:" + modulos.indexOf("a"));
+
+        //LASTINDEX0F(<CARACTER>):Devuelve la ultima posicion de un caracter en una cadena.
+        alert("La ultima aparicion de la letra A en la cadena modulos es:" + modulos.lastIndexOf("a"));
+
+        //SEARCH(<CADENA|EXPRESION>):bUSCAR UNA CADENA O EXPRESION REGULAR EN OTRA CADENA
+        alert("Busca los caracteres en cadena(en este caso 'web', en la variable api_web)" + modulos.search("web"));
+
+        //MATCH(<EXPRESION REGULAR>):Busca una expresion regular en otra cadena.(SE VERA MAS ADELANTE)
+
+        //----------METODOS DE COMPARACION:-------------
+
+        //COMPARE(<CADENA>):Devuelve -1(antes),0(igual),1(despues);
+
+        alert("¿Es la variable api_web menor que la variable iot?" + api_web.localeCompare(iot));
+
+
+        //
+    </script>
+</body>
+
+</html>

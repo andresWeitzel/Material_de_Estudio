@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+
+    <script src="jquery-3.1.1.min.js"></script>
+
+    <script>
+        $(document).ready(inicio);
+
+        function inicio() {
+            /*
+            SELECTORES
+            $("p")//Seleccionar elementos por su etiqueta
+            $("#primero")//Seleccionar elementops por su id
+            $(".importante")//Seleccionar elementos por su clase
+            $("p[name=primero]")//Por su atributo
+            $("a[target='_blank']")//Por su pseudoselectores 
+            etc..
+            */
+
+            $("p").mouseover(function() {
+                //$("p").css("color", "red");
+                $(this).css("color", "red"); //Para que no sean todos los parrafos sino el que se posicione
+            });
+            $("p").mouseout(function() {
+                //$("p").css("color", "black");
+                $(this).css("color", "black");
+            });
+            $("p#first").click(function() {
+                alert("Has pulsado el primer parrafo"); //Captura el id del parrafo
+            });
+            $("p.second").click(function() {
+                $(this).hide(); //Captura la clase del parrafo y con el hide lo oculta
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <p id="first">Parrafo1</p><br>
+    <p>Parrafo2</p><br>
+    <p class="second">Parrafo3</p>
+
+
+</body>
+
+</html>

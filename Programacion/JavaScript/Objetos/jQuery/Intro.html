@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <!----script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    //Anexamos la url online de microsoft o google de la libreria jquery</>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script-->
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        /*
+                            SINTAXIS  $(selector).accion()
+                            
+                            Esperar a que se cargue el HTML
+                            
+                            1)$(document).ready(function(){
+                                alert("Pagina Cargada"); });
+                            
+                            2)$(document).ready(inicio);
+                                function inicio(){
+                                    alert("Pagina Ok");
+                                }
+
+                            3)$(function)(){
+                                alert("Todo ok");
+                            } 
+                            
+                            */
+    </script>
+    <script>
+        $(document).ready(inicio);
+
+        function inicio() {
+            alert("Pagina Ok");
+            document.getElementById("Hi").innerHTML = "Hi two!!!";
+        }
+    </script>
+
+</head>
+
+<body>
+    <p id="Hi"></p>
+
+</body>
+
+</html>

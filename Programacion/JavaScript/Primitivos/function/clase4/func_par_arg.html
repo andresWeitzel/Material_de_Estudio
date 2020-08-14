@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Parametros y Argumentos</title>
+</head>
+<body>
+	<script>
+		//Parametros por defecto(ejemplo sin definir parametro b)
+		function suma(a,b){if(b===undefined){b=0;return a+b;}}
+		var resultado=suma(4);
+		alert(resultado);
+		//parametro por exceso,incluimos mas argumentos del que fueron declarados
+		function valores1(){alert (arguments.length);}//arguments.length; lee como un array el largo de los parametros y es un metodo
+		valores1(4,5,6,7,8);//nos indica la totalidad del array
+
+		function valores2(){alert("El nro de argumentos es: "+arguments.length);for(var i=0;i<arguments.length;i++){alert("Argumento "+i+"="+arguments[i]);}}
+		valores2(9,10,11,12,13,14,15);
+
+
+
+	</script>
+
+</body>
+</html>

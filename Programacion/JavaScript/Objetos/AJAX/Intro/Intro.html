@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="texto">
+        <h1>AJAX</h1>
+        <button id="CambiaContenido">Cambia el Contenido</button>
+    </div>
+
+    <script>
+        //PARA ESTE EJEMPLO SE DEBERA USAR UN SERVIDOR
+
+
+        document.getElementById("CambiaContenido").addEventListener("clcik", cambiaContenido);
+
+        function cambiaContenido() { //Esta funcion nos sirve para actualizar algun elemento de la pagina sin actualizar la misma.
+            var xhr = new XMLHttpRequest();
+
+            //Cada vez que enviee la solicitud va a ir cambiando el etado del ready state y se ejecutara la funcion 
+            xhr.onreadystatechange = function() {
+
+                    //lo siguiente es para comparar los estados, nos interesa el estado 4 del objeto httpRequest cuando la solicitud a sido finalizada y la respuesta esta lista y el estado 200 indica el ok(200=ok, 404=notFound,etc).   
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("texto").innerHTML = this.responseText;
+
+                    }
+
+                }
+                /*Especificamos la solicitud con el metodo .open, colocar de que tipo sera el parametro:
+            -->GET/POST.....GET=Es un tipo de metodo mas rapido,tiene un limite de caracteres y el envio es a traves de la url
+            -->Archivo a procesar:txt,php,xml,json,etc
+            -->Metodo de envio:TRUE(Asincrono-->Se ejecutaran solo los objetos deseados y no la pagina completa) OR FALSE(Sincrono-->No continua hasta que la respuesta este lista).
+      
+            */
+
+            xhr.open("GET", "Hi.txt", true);
+
+            //Envio de la solicitud al servidor(.send),si utilizamos post debemos pasar los datos por parametros.
+            xhr.send();
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>

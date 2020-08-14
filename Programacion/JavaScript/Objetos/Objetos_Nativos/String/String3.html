@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        var api_web = "Desarrollo de aplicaciones web ";
+        var apps_phone = 'Desarrollo de aplicaciones moviles';
+        var adm_SI = "Administracion de'Sistemas Informaticos'en Red";
+        var iot = "Sistemas\"Conexion\" y Redes";
+        var modulos = new String("");
+
+        //----METODOS INCLUYE ,EMPIEZA O TERMINA-----
+
+        //INCLUDE(<CADENA>):Devuelve true si la cadena incluye  el parametro
+        alert("¿Incluye la palabra'aplicaciones' la variable api_web?" + api_web.includes("aplicaciones"));
+
+        //STARTSWITH(<CADENA>):Devuelve true si la cadena comienza con el parametro('aplicaciones')
+        alert("¿Empieza la variable api_web con la palabra        'aplicaciones'?" + api_web.startsWith("aplicaciones"));
+
+        //STARTSWITH(<CADENA>):Devuelve true si la cadena comienza con el parametro('aplicaciones')
+        alert("¿Empieza la variable api_web con la palabra 'aplicaciones'?" + api_web.startsWith("aplicaciones"));
+
+        //ENDSWITH(<CADENA>):Devuelve true si la cadena FINALIZA con el parametro('aplicaciones')
+        alert("¿Finaliza la variable api_web con la palabra 'aplicaciones'?" + api_web.endsWith("aplicaciones"));
+
+        //------METODOS CONCATENACION Y REPETICION-----
+
+        //CONCAT(<CADENA>):Concatena a la cadena el pñarametro:
+        alert("concatena api_web con iot\n" + api_web.concat(iot));
+
+        //REPEAT(<NUMERO>):Repite  la cadena el numero de veces que aparece como parametro
+        alert("Repetir api_web(3 veces)\n" + api_web.repeat(3));
+
+        //-----METODO EXTRACCION----------
+
+        //SLICE(<POSICION INICIAL>,<POSICION FINAL>):Devuelve la cadena comprendida ennttre ambas posiciones
+        alert("La cadena que hay entre el 4 y 7 en api_web es: " + api_web.slice(4, 7));
+
+        //SUBSTRING(<POSICION INICIAL>,<POSICION FINAL>):Devuelve la cadena comprendida ennttre ambas posiciones
+        alert("La cadena que hay entre el 4 y 7 en api_web es: " + api_web.substring(4, 7));
+
+        //SUBSTR(<POSICION INICIAL>,<N° DE CARACTERES>):Devuelve la cadena comprendida ennttre la posicion inicial y el numero de caracteres
+        alert("La cadena de 5 caracteres que hay a partir del caracter 7 en api_web es: " + api_web.substr(5, 5));
+
+        //SPLIT(<CARACTER>,[<NUMERO DE VECES>]):Divide la cadena en un arrayde subcadenas separadas por el caracter del primer parametro
+        alert("La cadena api_web separada por espacios es:" + api_web.split(" ", 2));
+
+        //TRIM(<CADENA>):Extrae los caraacteres de la cadena eliminando los espacios del prinjcipio y del final
+        alert("La cadena sin espacios quedaria :\n" + "  Hola  como    estas?".trim());
+
+        //TOLOWERCASE():Devuelve la cadena en minuscula
+        alert(api_web.toLowerCase());
+
+        //TOUPPERCASE():Devuelve la cadena en minuscula
+        alert(api_web.toUpperCase());
+    </script>
+</body>
+
+</html>

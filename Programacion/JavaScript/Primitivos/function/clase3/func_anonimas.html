@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Funciones Anonimas</title>
+</head>
+<body>
+	<script>
+		//Son funciones sin nombre
+			
+		var producto=function(a,b){return a * b;}//Se utiliza una variable para almacenar la funcion en cualquier otra ocasion.
+		var resul_producto=producto(3,4);
+		alert(resul_producto);
+		
+		//Constructor FUNCTION(),funcion anonima
+		var miFuncion=new Function("a","b","return a*b;");
+		var result2=miFuncion(5,7);
+		alert(result2);
+
+		//Funciones anonimas autoinvocadas
+		(function (){alert("Hola");}());//sin variables,sin invicacion,etc,solo con los parentesis hacemos la diferencia
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

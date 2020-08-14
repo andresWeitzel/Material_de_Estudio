@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <style>
+        .clasecss {
+            color: darkcyan;
+        }
+    </style>
+    <script>
+        window.onload = inicio; //Para que no se ejecute lo del script hasta que no se haya cargado completamente la pagina,cuando se carga ejecuta la funcion inicio
+
+        function inicio() {
+            document.getElementById("CrearParrafo").addEventListener("click", CrearParrafo);
+            document.getElementById("CrearImagen").addEventListener("click", CrearImagen);
+            document.getElementById("BorrarUltimo").addEventListener("click", BorrarUltimo);
+            document.getElementById("BorrarPrimero").addEventListener("click", BorrarPrimero);
+            document.getElementById("SustPrimeroVacio").addEventListener("click", SustPrimeroVacio);
+
+        }
+
+        function CrearParrafo() {
+            //Crear elemento 
+            var parrafo = document.createElement("p"); //Le pasamos como parametro la etiqueta p de parrafo
+            //Crear texto
+            var texto = document.createTextNode(document.getElementById("texto").value); // Creada la variable donde se almacenara el texto que contendra el textarea del body
+
+            parrafo.appendChild(texto); //Añadimos un id
+
+            //Añadir Atributos
+            parrafo.setAttribute("class", "clasecss");
+            //parrafo.className="clasecss";
+
+            //Utilizamos el textareea
+            var cont = document.getElementById("div1");
+            cont.appendChild(parrafo); //Le añadimos como hijo el parrafo al textarea
+        }
+
+        function CrearImagen() {
+            //Crear elemento 
+            var Imagen = document.createElement("img"); //Le pasamos como parametro la etiqueta img de imagen
+
+            //Añadir Atributos
+            Imagen.setAttribute("src", prompt("Introduce la ruta de la imagen"));
+            Imagen.setAttribute("alt", prompt("Introduce un texto de la imagen"));
+
+
+            //Utilizamos el textareea
+            var cont = document.getElementById("div1");
+            cont.appendChild(Imagen); //Le añadimos como hijo la imagen al textarea
+        }
+
+        function BorrarUltimo() {
+            //Seleccionamos el hiijo y el padre de textarea
+            var cont = document.getElementById("div1");
+            var hijo = cont.lastChild; //Seleccionamos el hijo del hijo.
+            //Eliminamos el nodo
+            cont.removeChild(hijo); //Borramos el ultimo hijpo que tiene div
+
+        }
+
+        function BorrarPrimero() {
+            //Seleccionamos el hiijo y el padre de textarea
+            var cont = document.getElementById("div1");
+            var hijo = cont.firstChild; //Seleccionamos el primer hijo
+            //Eliminamos el nodo
+            cont.removeChild(hijo); //Borramos el ultimo hijpo que tiene div
+
+        }
+
+        function SustPrimeroVacio() {
+            var cont = document.getElementById("div1");
+            var parrafo = document.createElement("p");
+            var texto = document.createTextNode("vacio");
+            parrafo.appendChild(texto); //El texto sera el hijo del parrafo
+
+            //Sustituir un elemento
+            cont.replaceChild(parrafo, cont.firstChild); //Sustituimos el cont por parrafo
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <textarea id="texto"></textarea>
+
+    <button id="CrearParrafo">Crear Parrafo</button>
+    <button id="CrearImagen">Crear Imagen</button>
+    <button id="BorrarUltimo">Borrar Ultimo</button>
+    <button id="BorrarPrimero">Borrar Primero</button>
+    <button id="SustPrimeroVacio">Sustituir primer Parrafo</button>
+</body>
+
+</html>

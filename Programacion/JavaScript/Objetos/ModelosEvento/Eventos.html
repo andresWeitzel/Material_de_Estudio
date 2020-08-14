@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h1 id="eventos">Obtener info. de un Evento</h1>
+    <h2 id="parrafo1">Parrafo1</h2>
+    <h2 id="parrafo2">Parrafo2</h2>
+    <script>
+        document.getElementById("eventos").addEventListener("mouseover", manejador);
+        document.getElementById("eventos").addEventListener("mouseout", manejador);
+
+        document.getElementById("parrafo1").addEventListener("click", saludo);
+        document.getElementById("parrafo2").addEventListener("click", saludo);
+
+        function manejador(evento) {
+            if (!evento) evento = window.event; //Esto es para generar un evento
+            //el .type es para saber que tipo de evento es cuando utilizamos esta funcion
+            switch (evento.type) {
+
+                case "mouseover":
+                    this.style.color = "blue";
+                    break;
+
+                case "mouseout":
+                    this.style.color = "red";
+                    break;
+            }
+
+
+        }
+
+        function manejador(evento) {
+            if (!evento) {
+                evento = window.event;
+            }
+
+            //Con el target lo que hacemos es extraer el elemento h2(ej:su id)
+            if (evento.target.id == "parrafo1") {
+                alert("Has pulsado el primer parrafo");
+            } else if (evento.target.id = "parrafo2") {
+                alert("Has pulsado el segundo parrafo");
+                alert("Has pulsado el " + evento.target.id);
+            }
+        }
+    </script>
+</body>
+
+</html>

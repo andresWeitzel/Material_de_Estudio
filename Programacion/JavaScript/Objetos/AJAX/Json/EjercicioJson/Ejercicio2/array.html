@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script>
+        window.addEventListener("load", inicio);
+
+        function inicio() {
+            document.getElementById("mostrar").addEventListener("click", mostrar);
+        }
+
+        function mostrar() {
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    //Capturamos el texto generado en php en html
+                    var alumnos = JSON.parse(this.responseText); //Parseamos lo que recibamos como texto de JSON a una variable que podamos trabajar con ella en JS(Nos devuelve otro array).
+
+                    //recorremos el array
+                    for (var i = 0; i < alumnos.length; i++) {
+                        document.getElementById("parrafo").innerHTML += alumnos[i] + "<br/>";
+                    }
+                    //Para convertir un array JS en cadenas JSON usamos stringfy
+                    var cadena = JSON.stringify(alumnos);
+
+                    document.getElementById("parrafo").innerHTML += alumnos[i] + " El array " + alumnos + " en modo cadena es " + cadena + "<br/>";
+                }
+            }
+            xhr.open("GET", "ArrayJson.php", true);
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+    <button id="mostrar">Mostrar</button>
+    <p id="parrafo"></p>
+</body>
+
+</html>

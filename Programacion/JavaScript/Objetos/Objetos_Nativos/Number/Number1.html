@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        /*-----CARACTERISTICAS:----------
+                                                                                                                                                                                        --Solo hay un tipo de dato numerico
+                                                                                                                                                                                        --Podemos representar:34,34.06,123e4,0xff,etc
+                                                                                                                                                                                        */
+
+        //--------METODOS Cambio de base entre numeros--------
+
+        //TOSTRING()
+        var base10 = 128;
+        alert(base10 + "en base binario(2)" + base10.toString(2));
+        alert(base10 + "en base octal(8)" + base10.toString(8));
+        alert(base10 + "en base hexadecimal(16)" + base10.toString(16));
+
+        //INFINITY Y -INFINITY(EL NUMERO MAS GRANDE QUE SE PODRA ALMACENAR EN NUESTRA VARIABLE)
+        var inf = "2";
+        while (inf != Infinity) {
+            alert(inf);
+            inf = inf * inf; // o tambien inf*=inf
+
+        }
+
+        //NAN(NOT A NUMBER)
+        var atipico = 100 / "casa";
+        alert("100/'casa'=" + atipico);
+        alert("¿Es un NAN Atipico" + isNaN(atipico));
+        alert("¿De que tipo es  NAN Atipico" + typeof(atipico));
+
+
+        //NUMEROS COMO OBJETOS
+        var num = 123;
+        var num2 = new Number(123);
+        alert("num" + typeof(num)); //devuelve number
+        alert("num2" + typeof(num2)); //devuelve objeto
+        alert("num==num2:" + (num == num2)); //Nos devuelve el valor de ambos
+        alert("num==num2:" + (num === num2)); //Nos devuelve el tipo de ambos
+    </script>
+</body>
+
+</html>

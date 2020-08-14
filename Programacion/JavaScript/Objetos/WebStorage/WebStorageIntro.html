@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    /* WEB STORAGE(LOCALSTORAGE Y SESSIONSTORAGE) -Permite almacenar datos localmente en el navegador del usuario -Es mas seguro y almacena mas infrmacion que las cookies -El web storage se almacena por origen(dominio y protocolo): todas las paginas del mismo
+    origen pueden acceder a los mismos datos. */
+
+    <script>
+        //Comprobacion de que el navegador soporta webStorage
+        if (typeof(Storage) !== "undefined") {
+            alert("El navegador soporta webStorage");
+        } else {
+            alert("El navegador NO soporta webStorage");
+
+        }
+
+        //window.localStorage: alemacena dats sin fecha de expiracion
+        //Crear un elemento(!Siempre son cadenas!)
+        localStorage.setItem("nombre", "Andrés"); //ES RECOMENDABLE{{Recordar siempre son cadenas STRING
+        localStorage.apellido = "Correa"; //NO ES RECOMENDABLE
+
+        //Consultar un elemento
+        alert(localStorage.getItem("nombre")); //ES RECOMENDABLE
+        alert(localStorage.apellido); //NO ES RECOMENDABLE
+
+        //Borrar un elemento
+        localStorage.removeItem("apellido");
+        alert(localStorage.getItem("nombre") + "" + localStorage.getItem("apellido"));
+
+        //Borrar todos los elementos
+        localStorage.clear();
+        alert(localStorage.getItem("nombre") + "" + localStorage.getItem("apellido"));
+
+        //window.sessionStorage: Almacena los datos durante una sesion
+        //Si se cierra la ventana o el navegadr, desaparecen
+    </script>
+
+
+</body>
+
+</html>

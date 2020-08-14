@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h1>Instrucciones de Salida</h1>
+	<p id="miParrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	
+	<script >
+		alert("Alerta");
+		//document.write("<h2>Como esta?</h2>");//Nos escribe algo inmediatamente despues del prompt(No se recomienda)
+		document.getElementById("miParrafo").innerHTML="Parrafo modificado";;//Nos compara un Id de referencia a lo que nosotros coloquemos despues de ById y con el innerHTML pasamos el nuevo parametro a mostrar.(SobreESCRITURA).S
+		console.log("texto para la consola");//Solo para la consola, para los desarrolladores(f12).
+	</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script>
+        window.onload = inicio;
+
+        function inicio() {
+            for (var i = 0; i < document.getElementsByTagName("h2").length; i++) {
+                document.getElementsByTagName("h2")[i].addEventListener("click", Recorrer);
+            }
+        }
+
+        function Recorrer(e) { //Le pasamos como parametro e para  saber especif. que evento(h2) habra
+            var texto = ""; //Nos servira para escribir el mensaje quye luego copiaremos en el div
+            var h2 = e.target; // Con el .target extraemos el elemento evento 
+            texto += "Has elegido " + h2.textContent; //Con el .textContent extraemos el elemento.
+            //Seleccionamos el padre
+            var padre = h2.parentElement; //El padre de ul y li
+            texto += " Situada en el " + padre.id + "<br/>";
+
+            //Movernos a traves de los elementos
+            //Seleccionamos un hermano(ul y li SON HERMANOS)
+            var ul = h2.nextElementSibling;
+
+            //Mostrar el nmero dde hijos 
+            texto += "El numero de provincias es " + ul.children.length + ": ";
+
+            var hijo = ul.firstChild;
+            while (hijo != null) {
+                texto += " " + hijo.textContent; //.textContent es para extraer el texto del interior del hijo
+                hijo = hijo.nextElementSibling; //Va escojiendo los demas hijos
+
+            }
+
+            //Mostramos el texto
+            document.getElementById("texto").innerHTML = texto;
+            //Si colocamos .textContent mostramos el tetxo plano, y no incluye etiquetasd html
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="Pacifico">
+
+        <h2>Chile</h2>
+
+        <ul id="lista">
+            <li>Santiago</li>
+            <li>Antofagasta</li>
+            <li>Chiloe</li>
+            <li>Valdivia</li>
+            <li>BioBio</li>
+            <li>Curico</li>
+        </ul>
+    </div>
+
+    <div id="Atlantico">
+
+        <h2>Argentina</h2>
+
+        <ul id="lista">
+            <li>Santa fe</li>
+            <li>Cordoba</li>
+            <li>Entre Rios</li>
+            <li>Buenos Aires</li>
+            <li>Tierra del Fuego</li>
+            <li>Tucuman</li>
+
+        </ul>
+
+    </div>
+
+    <div id="texto"></div>
+
+</body>
+
+</html>

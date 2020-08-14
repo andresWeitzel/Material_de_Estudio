@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <style>
+        .csscolor {
+            color: aquamarine;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", inicio);
+
+        function inicio() {
+            document.getElementById("cambiarTextos").addEventListener("click", cambiarTextos);
+            document.getElementById("cambiarClases").addEventListener("click", cambiarClases);
+            document.getElementById("quitarClases").addEventListener("click", quitarClases);
+        }
+
+        function cambiarTextos() {
+            //1ra opcion Seleccionar un unico elemento segun su id
+            document.getElementById("parrafo1").innerHTML = "Primer parrafo cambiado por ids";
+            //2da opcion Seleccionar todos los elementos segun su etiqueta
+            document.getElementsByTagName("p")[1].innerHTML = "Segundo parrafo cambiado por etiquetas"; //toma todos los elementos que comiencen con p, luego eligo el segundo elemento del array(parrafo2)
+            //3ra opcion Seleccionar todfos los elementos segun su clase
+            document.getElementsByClassName("miClase")[0].innerHTML = "Tercer parrafo cambiado por class"; //Como solamente tengo creada una sola clase en el parrafo 3 entonces la llamo del array en su posicion 0
+
+        }
+
+        function cambiarClases() {
+            //Llamamos  a la clase de css
+            document.getElementsByTagName("p")[0].setAttribute("class", "csscolor"); //El primer parametro de .setAttribute le indicamos que sera una clase
+            document.getElementsByTagName("p")[1].className = "csscolor";
+            document.getElementsByTagName("p")[2].className = "csscolor";
+
+        }
+
+        function quitarClases() {
+            document.getElementById("parrafo1").setAttribute("class", ""); //No le passamos nada
+            document.getElementById("parrafo2").className = ""; //No le pasamos nada
+            document.getElementById("parrafo3").className = "";
+
+            //SI tuviesemos 4500 parrafos se utiliza un bucle
+            for (var i = 0; i < document.getElementsByTagName("p").length; i++) {
+                document.getElementsByTagName("p")[i].className = "";
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <p id="parrafo1">Primer Parrafo</p>
+        <p id="parrafo2">Segundo Parrafo</p>
+        <p id="parrafo3" class="miClase">Tercer Parrafo</p>
+
+    </div>
+
+    <button id="cambiarTextos">Cambiar Texto de parrafo</button>
+    <button id="cambiarClases">Cambiar Clases de parrafo</button>
+    <button id="quitarClases">Quitar Clases de parrafo</button>
+
+</body>
+
+</html>
