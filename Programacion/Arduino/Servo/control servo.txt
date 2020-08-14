@@ -1,0 +1,56 @@
+#include "Servo.h"
+Servo titan;
+int ro = 0;
+int dato = 0;
+void setup() {
+  // put your setup code here, to run once:
+  titan.attach (3);
+  Serial.begin(9600);
+  pinMode (13, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+          Serial.print("hola");
+        Serial.print("\n");
+  if (Serial.available() > 0)
+  {
+
+    dato = Serial.read();
+              Serial.print(dato);
+        Serial.print("\n");
+    if (dato == 'e')
+    {
+      digitalWrite(13, HIGH);
+                Serial.print("ENC");
+        Serial.print("\n");
+
+        delay(2000);
+    }
+    if (dato == 'a')
+    {
+      digitalWrite(13, LOW);
+
+    }
+
+
+
+    if (dato == 's')
+    {
+
+      for (int ro = 30; ro <= 120; ro++)
+      {
+        titan.write(ro);
+        Serial.print(ro);
+        Serial.print("\n");
+        delay(30);
+      }
+      for (int ro = 120; ro >= 30; ro--)
+      {
+        titan.write(ro);
+        delay(30);
+      }
+    }
+  }
+}
+
