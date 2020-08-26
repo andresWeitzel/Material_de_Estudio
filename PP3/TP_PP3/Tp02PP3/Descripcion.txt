@@ -1,0 +1,17 @@
+==CRUD COVID-19==
+
+Se presentara un crud relacionando una base de datos y una interfaz grafica sobre  la organizacion y control de diversas
+variables relacionadas con el covid.
+Esta es una seccion que como desarrollador me toca realizar en un proyecto para el core principal de una aplicacion
+web y mobile  con un grupo de programadores.
+
+Tema:CRUD relacionando una DB y una GUI 
+
+Lenguajes:PHP y SQL
+
+Tecnologias:AJAX,JUERY,PHP,MYSQL
+
+Patrones de Diseño:MVC Y DAO
+
+IDE:Visual studio code
+  
