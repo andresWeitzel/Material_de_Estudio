@@ -9,7 +9,7 @@ Tema:CRUD relacionando una DB y una GUI
 
 Lenguajes:PHP y SQL
 
-Tecnologias:AJAX,JUERY,PHP,MYSQL
+Tecnologias:AJAX,JQUERY,PHP,MYSQL
 
 Patrones de Diseño:MVC Y DAO
 
