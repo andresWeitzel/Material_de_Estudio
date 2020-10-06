@@ -1,0 +1,43 @@
+
+==============================================
+======PREDESARROLLO INICIAL PARTE 2=========
+==============================================
+
+Recordando..
+NO SE DESEA MANIPULAR EL SISTEMA INTERNO DE CONTROL QUE POSEEN TANTOS LOS SENSORES COMO LOS ACTUADORES, SINO ADICIONAR 
+UNA CAPA DE SEGURIDAD DE CONTROL QUE NOS PERMITA OBTENER INFORMACION ACERCA DE LOS POSIBLES ERRORES  Y EN CASO DE QUE
+ SE PRESENTEN QUE SE EJECUTE UNA O VARIAS ACCIONES.
+
+La siguiente etapa dentro del predesarrollo iniical es diseñar como sera nuestro subsistema de alimentacion 
+modular en base a todos los posibles problemas enumerados en las secciones anteriores. Este diseño no sera compacto ya
+que al ser modular los sensores y otros dispositivos electronicos estaran desaclopados, por ende dependiendo la/s variable/s que
+se deseen controlar(t° del agua, t° del ambiente, nivel de ph, etc) se adicionaran al mmismo, nuevamente recalco, independientemente
+del tipo de variable, el principal y mas importante punto es, cual especie especifica sera la que se aplique este sistema, dentro de la taxonommia
+pedida, no es lo mismo la alimentacion de una tortuga que la de una vibora,esto mismo fue explicado al inicio.Entonces, el sistema mismo de 
+alimentacion, solo el sistema este, no el general, se deberan diseñar varios para varios posibles aplicaciones para varias especies.
+
+Para el subsistema de temperatura no hara falta ningun adicional mas alla del sistema propio de temperatura de la manta/calefactor y/o otro.
+Este sistema se conecta directamente a las entradas del arduino y mandan los diferentes parametros, se debe indagar la posible sincronizacion
+de estos sensores con la placa arduino, ya que trabajan a diferentes frecuencias, entr otros junto con la compatibilidad, en caso de que no la haya
+se optara por usar la gama de sensores que se diseñaron para esta placa(dht11, dht22, pt100,etc).Planteado y solucionado este problema se
+pasara a definir como sera el desarrollo de la programacion para el subsistema de contol de temperatura.
+
+El subsistema de potencia(aireador, bomba, filtro) se debera al igual que los anteriores y consecuentes subsistemas definir la compatibilidad
+de los mismos junto con la del arduino, a diferencia de referenciar y no manipular estos actuadores, se DESEARIA poder controlar el funcionamiento
+en cuanto consumo, prender apagar a diferentes laptos, etc.Pero como seguramente no haya compatibilidad con prender y apagar ante un posible fallo basta
+Si se aplicase una bomba de agua diseñada para el arduino, de las que rondan los $4000 en el mercado actual, se unifica con un caudalimetro y se plantearia
+un sistema de control completo para este proposito, tanto la bomba como el filtro y el aireador a aplicar al subsistema se aplica el encendido y apagado de las
+mismas.La programacion de este subsistema presentara una complejidad mayor ya que los parametros que s sensan con el resto de los sensores es mas abarcativo
+y debera presentarse un sincronismo commo tal.
+
+Para el suministro energetico como se mnenciono anteriormente se trabajara con 220 de alterna y 5 de cc para el arduino, si se aplicase sensores para esta placa los
+mismos no presentaran una complejidad en cuanto al consumo, tal asi que con la alimentacion de la placa arduino basta, los actuadores trabajan conn¿ alimentacion de alterna
+y para la manipulacion de los mismos se debera plantear un subsistema de switcheo on/off.El subsistema de alimentacion probablemente tenga un motor de cc para la rotacion del
+alimentador, no especificadp elñ voltaje ni corriente, enm caso de que asi sea, se aplica un conversor buck o boost para el suministro directamente del alimentador que aplica al arduino
+sin pasar por este, logicamente.
+
+=Aclaraciones=
+Hasta aca abarca el predesarrollo, antes del mismo se debio haber aplicado el diseño, esquema de componentes, estructura, relaciones, bocetos, etc.Al indagar un proyecto y no 
+aplicarlo a la realidad(trabajo practico teorico, sin pruebas ni testeos del programa, hardware y todo el resto) el horizonte de aplicacion fue confuso, por ende hay y habra
+muchisima redundancia, esto no es desarrollo de software, es implementacion de software a base de hardware, por ende si no existe la base no habra sustento solido para lo otro, como
+mencione a priori, tomarlo como tal 

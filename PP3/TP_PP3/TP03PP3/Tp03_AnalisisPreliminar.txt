@@ -1,0 +1,73 @@
+
+==Analisis Preliminar==
+
+||Objetivo||-->Sistema que se encargue de controlar el calentador de
+agua para que sea de la temperatura deseada y se mantenga en ese rango, también 
+maneja la potencia del filtro, mide el PH del agua, expendedor de alimento, filtrado
+ y cambio de agua.
+
+||Alcance||-->Reptiles-->Tortugas,lagartijas,viboras,etc(recupera el .txt que envie al 
+grupo sobre alimentacion).
+
+||Variables||-->
+
+<Alimentacion>-->
+La alimentacion no es la misma para diversas 
+especies dentro de este grupo.Por ende(en la alimentacion) se tratara alimentos "no 
+perecederos" o alimentos del tipo suplemento.
+
+<Agua>-->
+No todas las especies usan los mismos bebederos y en la misma ubicacion, algunas especies requeriran
+señales para advertir la disposicion de agua
+
+<PH del agua>-->
+Uso de sensor peachímetro
+
+<Calentador de agua>-->
+Mas que calentador de agua diria ambiente climatizado(solo en el sector donde este el animal y la especie
+que lo requiera) con termoestato(reptiles son de sangre fria)
+			
+<Filtro>
+Usamos filtro de pecera, purificador de agua
+
+||Instrumentacion||-->
+Cada instrumento varia dependiendo la capacidad del tanque, atenti(definir)
+Valor Estimativo
+
+Aireador($600)-->
+https://articulo.mercadolibre.com.ar/MLA-678790930-aireador-pecera-
+super-silencioso-rs290-1-salida-regalo-_JM#reco_item_pos=6&reco_backend
+=machinalis-v2p-pdp-boost-v2&reco_backend_type=low_level&reco_client=vip
+-v2p&reco_id=0e20eded-82c2-469e-a0e3-b7780a90784c
+
+Bomba($800)-->
+https://articulo.mercadolibre.com.ar/MLA-830193336-bomba-de-agua-para-pecera-bl-109-250lh-sled-5w-feng-sui-_
+JM#position=6&type=item&tracking_id=f220e117-6c85-4583-92e5-f1511dd6bdf3
+
+Sensor de PH($4000)-->
+https://articulo.mercadolibre.com.ar/MLA-756238185-sensor-e-201-de-ph-arduino-medidor-de-ph-eut-mona-_JM#position=1&type
+=item&tracking_id=cd8726c8-0c30-49f1-97e3-98ca8c07c221
+
+FiltroInterno/Aireador($1000)-->
+https://articulo.mercadolibre.com.ar/MLA-703545970-oferta-filtro-interno-rs602-300lh-3-en-1-aireador-envios-_JM?variation=22520791908#
+reco_item_pos=1&reco_backend=machinalis-pads&reco_backend_type=low_level&reco_client=vip-pads-right&reco_id=e55f631d-81dd-48b6-84f7-3464418d
+0a38&is_advertising=true&ad_domain=VIPCORE_RIGHT&ad_position=2&ad_click_id=YjllNDQ3NGEtM2Q3Yy00ZDg2LTk1NzYtODlhZjBkOWMzZTNj
+
+
+Alimentador Automatico($1700)-->
+https://articulo.mercadolibre.com.ar/MLA-616252506-alimentador-automatico-para-peces-resun-af-2003-envios-_JM#position=12
+&type=item&tracking_id=26186059-bbd6-44b8-94b4-d6853c24886d
+
+Termometro($800)-->
+https://articulo.mercadolibre.com.ar/MLA-618537401-termometro-digital-para-acuarios-peceras-acuario-oasis-_JM?variation=34334747046#reco_item_pos=16&reco_backend=machinalis-v2p-pdp-boost-v2&reco_backen
+d_type=low_level&reco_client=vip-v2p&reco_id=06e85453-579b-4368-b787-6bf2a53bb807
+
+Manta Termica($1300)-->
+https://articulo.mercadolibre.com.ar/MLA-806829044-flex-watt-manta-termica-_JM?searchVariation=41605122088#searchVariation=41605122088&position=2&type=item&tracking_id=bb9c359c-197a-4867-84a0-167920870ae7
+
+Calefactor Sumergible($1320)-->
+https://articulo.mercadolibre.com.ar/MLA-733309911-calefactor-pecera-de-acero-inoxidable-de-25w50w75wenvios-_JM#position=28&type=item&tracking_id=bb9c359c-197a-4867-84a0-167920870ae7
+
+
+--Total Aprox--
+$10000(Solo materiales y chinos)

@@ -1,0 +1,166 @@
+
+=====FEEDBACK ANALISIS======
+
+---------PRELIMINAR
+
+porque usamos arduino
+fama de arduino
+rasberry
+dar opciones por si algo no le usta al cliente
+arduino econmico 
+
+lo de los sensres se explica mas adelante , junto a los procedimientos ,2do parrafo !
+
+3 parrafo desarrolar mas
+lo de el aurduino y la corriente se lo pongo en el desarrollo
+
+mas general no marear tanto al cliente !
+sin tanto tecnico
+
+despues describi r lo tecnico
+
+separar comando(arduino) y potencia motores , y sensores()
+
+----------EN DESARROLLO
+ampliar quienes seran nuestrso clientes
+departamento administratico y departamento tecnico 
+recursos humanos camibar por recursos de personal
+ampliar area tecnica soporte y reparacion
+en compras alguien q sepa , tecnico
+mantenimiento. instalaciones y montajes
+uno q se queda y otro/s qe se muevan
+alguien con movilidad
+--buscar modelo de empresa de colsultora
+mision y valores (ampliar)
+
+corto plazo se encargar capataces o areas ttecnicas
+mediano plazo, gerentes de area
+largo plazo  los jefes o gerente general
+-gestion de proyecto, un proyecto dividirlo en cortom, mediano, y largo plazo.
+valores ampliar .
+agregar virtualidad a mision y valores
+
+
+
+=====RESPUESTAS FEEDBACK ANALISIS======
+
+--Anlisis Preliminar
+Se usa el arduino porque como ya se aclaro es mas facil de usar e implementar, para el raspberry
+se requiere de un conocimiento que no se posee
+Para el desarrollo del arduino se explica en el desarrollo del informe, esta parte es un analisis, no un desarrollo
+La tecnicidad debe ser clave para no generar confunciones a posteriori, la labia vulgar se aplica personalmente 
+o por telefono con el cliente, se supone que se informa de  un presupuesto, debe ser abarcado como tal.
+
+--desarrollo?Aun no fue tratado
+No creo que sea el foco del trabajo, se desvia mucho de lo que se pide, el punto es el producto, indagar sobre la parte 
+administrativa no compete con nuestros conocimientos tecnicos y requiere de conocimientos no adquiridos en el transcurso
+de la carrera.
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+==============================================
+==========PREDESARROLLO INICIAL==================
+==============================================
+
+
+--Temperatura--
+En la primera etapa del proyecto se proyecta las variables que tiendan a asemejar errores, como por ejemplo, una variacion de  temperatura.
+La Manta Termica se la programa para que controle los posibles desvios de temperatura dependiendo cual sea la variable de entrada(especie),
+ estas 
+necesariamente tienen como naturalidad una temperatura relevante en cuanto a variacion interna, por lo que la T° del ambiente de contencion debera 
+mantenerse
+en los rangos previamente programados.
+Los reptiles al ser de sangre fria, deberan mantenerse constantemente en los rangos de temepratura administrados, una variacion de la misma puede
+ ser fatal 
+dependiendo la especie y el contexto, por lo que se debe aplicar un sistema de control que trabaje independientemente de la red electrica.
+Un segundo sistema de control de seguridad de temperatura seria deseado aplicarlo con algun otro sensor y actuador, ademas del uso del termometro, 
+como por ejemplo
+un calefactor interno, pasado en el analisis preliminar, este, en caso de tratarse de un contenedor con agua.
+
+Especificaciones tecnicas del calefactor de agua
+Temperatura mínima - Temperatura máxima: 22 °C - 32 °C
+
+Especificaciones tecnicas de la manta termica:
+Temperatura promedio: 28-31ºGrados. Maximo de 35ºgrados.
+Esta echa para climatizar pequeños animales, incubadoras, germinadores, entre otros proyectos que requieran ese rango de temperatura.
+Si se requiere algo mejor se cambia
+
+Notar que estos calefactores y demas son automaticos para esa franja, pero lo que se busca es controlar el error que surja, no la temperatura en si.
+
+
+--Alimentacion--
+Junto con el testeo y puesta a prueba del sistema de control de temperatura el alimentador de reptiles debe contener alimentos no perecederos o
+suplementacion alimenticia,ej:vitaminas,deshidratados,etc ya que no se podra controlar el nivel de conservacion del alimento(carnes,vegetales), como
+ tampoco otra
+especie viva como alimento(ej:raton), por ende se debera pensar que tipo de alimentacion sera la mas ideal para aplicar al sistema, el mismo tambien 
+tiene la ventaja 
+de que al ser desacoplado con el resto del sistema principal y poseer unas dimensiones considerables se podra colocar manualmente la comida sin 
+perjudicar el resto del sistema
+No todas las especies de reptiles necesitan una fuente principal de agua ya que algunas aprovechan la misma del estanque(esta se filtra cada 
+cierto tiempo) y nos ahorra parte del diseño
+como asi tamnbien hay especies que no necesitan mnas alla del aporte alimenticio
+Para este punto se debe tratar la cantidad de comida y/o agua a administrar, el tipo de comida, el periodo de administracion, motor, mecanica y bajo que otras
+ variables estara sujeta.
+
+
+--Aireador, bomba, filtro--
+Se puede optar por conseguir un sistema unico para abstraernos de la sincronia de los mismos y asi poder tener un control mas general
+A tratar
+
+
+Especificaciones tecnicas deL Aireador
+Caudal: 72 L/h
+Una Salida
+Consumo 3W
+Funciona a 220W
+
+
+Especificaciones tecnicas de la bomba
+CAUDAL: 2500 LITROS/HORA
+ELEVACIÓN MÁXIMA: 60 CM
+CONSUMO: 5 WATTS
+TENSIÓN: 220 VAC
+
+Especificaciones tecnicas del filtro
+Caudal máximo por hora: 300 l/min
+Capacidad máxima del filtro: 300 L
+Mínimo consumo eléctrico: 3w
+
+
+--Sensor PH--
+El sensado de este sensor se debera comprender no solo por el ph, sino tambien por las diferentes variables relacionadas, el nivel de agua,
+ cantidad, temp, etc, Se puede optar por desarrollar
+el software de control especifico o incorporado junto con el filtro bomba, etc.
+
+Especificaciones tecnicas del sensor de ph
+Sensor E-201 De Ph Arduino Medidor De Ph Eut Mona
+Voltaje de funcionamiento: 5V
+
+--Nucleo del sistema--
+Arduino Mega, 5 volts, x entradas salidas suficientes como para extender el proyecto a futuro, en cuanto a dimensiones no influye en relacion a todo el sistema, mejor 
+que sobre a que falte.
+
+
+--Consumo--
+La bomba aireador y el filtro, la manta usan 220,  si se llegase a cortar la luz es u problema, solucion, comprar un generador, pasa por el lado del cliente, estabilizadores
+no es deseado para la calidad de estos aparatos, en todo caso al tableero principal del lugar, no al circuito.
+Circuito de control de emergencia(en caso de poseer generaador)
+Los sensores, el arduino ,junto con el motor del alimentador se aplica 5 volt
+
+
+
+
+NO SE DESEA MANIPULAR EL SISTEMA INTERNO DE CONTROL QUE POSEEN TANTOS LOS SENSORES COMO LOS ACTUADORES, SINO ADICIONAR UNA CAPA DE SEGURIDAD 
+DE CONTROL QUE NOS PERMITA
+OBTENER INFORMACION ACERCA DE LOS POSIBLES ERRORES  Y EN CASO DE QUE SE PRESENTEN QUE SE EJECUTE UNA O VARIAS ACCIONES.
+
+
+PD:
+->Esto es un borrador, el informe se entrega en la etapa final del tp.
+->Hay faltas y horrores de ortografia
+->Al no poseer la gran mayoria del hardware se intuye sobre la estructura y la funcionalidad del producto/prototipo, como ya se informo al comenzar el tp
+el mismo no es funcional, sino explicativo-teorico, tomarlo como tal.
+->Indagar sobre temas administrativos sin tener un horizonte claro y conciso es como operar en bolsa sin saber hacerlo, el nivel de detallismo empresarial
+ que se pide me parece irrelevante para lo que se define como objetivo principal.
+->Desde ya que el presupuesto asumido no corresponde bajo ningun aspecto, y mas aun si el producto es de innovacion.

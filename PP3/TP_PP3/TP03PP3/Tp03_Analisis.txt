@@ -1,0 +1,25 @@
+==Analisis del Prototipo==
+
+Optaremos por diseñar un circuito automatizado en el cual estara comprendido por los elementos
+sensores/componentes electronicos buscados junto con el nucleo central de procesamiento arduino,
+usaremos esta placa de procesamiento por que el desarrollo para realizar el sistema de control automatizado
+es mucho mas facil y controlable, se debera planificar las etapas del diseño para tener un orden programado junto 
+con el alcance de de cada parte a ser controlada por el arduino, esto quiere decir que el sistema de control debera
+poseer diversas secciones que controlaran diversas variables, por ejemplo la temperatura, la luminocidad, el alimento,
+etc.
+
+Para la prueba de cada seccion se debera testear los sensores/componentes a usar indepenientemente del resto de los 
+mismos y realizar diversas aproximaciones de posibles fallos, se debe encontrar la forma de adaptar estos elementos al 
+arduino para la correcta comunicacion, si esto no es posible se debera optar por adoptar los sensores/componentes adaptados
+a esta placa.No se descarta la idea de incorporar mecanismos electronicos para su uso.
+
+El sincronismo de todos los procesos(todas las secciones) deberan actuar de forma tal que cualquiera de estas no 
+perjudique a otra, ya que si por un motivo innnecesario dejase de funcionar un sensor no seria lo correcto que se 
+detenga el automatismo y si que alerte sobre la averia, habra que diseñar un proceso de error/deteccion
+
+La placa arduino no sumistrara toda la corriente que demande el circuito por razones electronicas, por ende se debera tartar que 
+tipo de alimentacion se usara para el circuito y los consumos maximos, nominales, esperados, etc a tratar.
+
+
+
+  
