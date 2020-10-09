@@ -1,7 +1,23 @@
 Repositorio dividido por carpetas(tasks), dentro de cada una se encuentra el/los trabajo/s y un archivo .txt donde se responde cada task
 
--Para Descargar-
+---------------------
+-Para Descargar PDF-
+---------------------
+1)Clikear el archivo deseado para la descarga
+
+2)A la derecha justo arriba de la informacion del mismo se encuentra un boton llamado download, clickear y descargar
+
+---------------------------------------
+-Para Descargar archivo de texto(.txt)-
+---------------------------------------
 
 1)Clikear el archivo deseado para la descarga
-2)A la derecha justo arriba de la informacion del mismo se encuentra un boton llamado download, clickear y descargar
-3)los archivos .txt se visualizan con cualquier programa
+
+2)A la derecha justo arriba de la informacion del mismo se encuentra un boton llamado raw, clickear y se abrira en una ventana
+
+3)click derecho en el cuerpo de la pagina, luego guardar como, seleccionas donde lo vas a guardar en tu dispositivo y procede la descarga
+(este paso varia depende que navegador se use, pero a fin de cuentas es descargar la pagina/texto(referencia de uso google chrome))
+
+4)los archivos de textos al tener un tamaño menor , el programa github no lo reconoce como descarga, por eso los pasos descriptos
+
+5)los archivos .txt se visualizan con cualquier programa
