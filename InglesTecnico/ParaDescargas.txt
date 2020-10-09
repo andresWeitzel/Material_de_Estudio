@@ -1,0 +1,7 @@
+Repositorio dividido por carpetas(tasks), dentro de cada una se encuentra el/los trabajo/s y un archivo .txt donde se responde cada task
+
+-Para Descargar-
+
+1)Clikear el archivo deseado para la descarga
+2)A la derecha justo arriba de la informacion del mismo se encuentra un boton llamado download, clickear y descargar
+3)los archivos .txt se visualizan con cualquier programa

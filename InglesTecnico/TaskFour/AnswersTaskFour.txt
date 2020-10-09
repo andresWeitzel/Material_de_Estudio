@@ -1,0 +1,42 @@
+===================
+ Reading comprehension
+===================
+
+---------------
+  Part 1
+---------------
+1)Ecobot technology
+
+2)
+2.a-->una celula de combustible microbiana es mas bien como una batería exepto que en lugar
+ de generar energía electria desde una reacción química, esta hace uso de una reacción bioquímica.
+
+2.b-->un MFC tiene anodo y catodo como cualquier batería ordinaria .pero en BRL el anodo contiene 
+un liquido con microbios capaces de digerir comida, elegida por contener un gran espectro de especies
+ de bacterias capaces de digerir casi todas los materiales biológicos
+
+2.c-->los MFCs generan unos pocos microwatts , mil veces menos que una batería AAA
+
+2.d-->el material que genera mas poder es el polisacárido chintin típicamente encontrado en los exoesqueletos 
+de los insectos . 8 moscas muertas por cada MFC.
+
+2.e-->El ECOBOT II es impulsado por 8 MFCs conectados en serie, cargando un banco de supercapacitores. Opera 
+en modo pulsado  cuando entra en ciclos de inactividad, mientras este come, y ciclos mas bastante mas cortos de actividad cuando sensa su 
+ambiente  o trasmite datos y maneja sus motores.
+
+2.f--> las limitaciones que tiene el ECOBOT II son que solo puede moverse alrededor de 13 cm por hora.tambien debe ser alimentado a mano , no 
+puede obtener su propia comida. Otro problema es que la digestion produce residuos que eventualmente serán veneno para los microorganismos,también
+ el MFC parara de trabajar hasta que su inoculo digestico sea refrescado.
+
+2.g-->los puertos de entrada y salida han sido añadidos  al anodo de modo que los microbios inoculos del MFCs puedan ser ciclados. El MFC a sido reducido 
+1 cm3.
+
+2.h-->Ecobot3 tieneuna trampa para moscas en su parte superior. Inspirado en plantas carnívoras, una convinacion de colores y fermonas artificiales
+ para que las moscas entren en la trampa , cayendo hacia un pozo contenedor de microbios. Las moscas son digeridas trasformandoce en una solución 
+rica en nutrientes. Que es trasferida por tubos hacia los 48 MFCs donde el proceso de digestion es completado. El inoculo es reciclado dos veces a
+ través de el MFCs. Produciendo desperdicios solidos que son filtrados desde la solución y son escretados .
+
+2.i-->Eco bot 3 es prueba de robots enérgicamente autónomos que colectan  difieron comida por energía y que genera la suficiente energía para trabajar
+
+
+

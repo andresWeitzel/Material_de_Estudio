@@ -1,0 +1,52 @@
+==========================
+==The art of Electronics==
+==========================
+
+--------------
+   Part 1
+--------------
+
+1)
+Opamps/operational amplifiers
+
+2)
+
+2.a-->el feedback es la respuesta a una retroalimentacion que se aplique a un sistema, planta,etc
+dentro de sistemas de control o algun modelaje de sistemas, puede ser negativa o positiva dependiendo
+las variables presentes y las que intervengan dentro del sistema a tratar,
+
+2.b-->feedback positivo/negativo
+
+2.c-->es un componente electronico amplificador cuya ganancia es elevada.
+
+2.d-->
+La salida intenta hacer lo que sea necesario para hacer cero la diferencia de voltaje entre las entradas,
+ los opapms consumen muy poca corriente de entrada, picoamperes para poca corriente de entrada.
+
+2.e-->
+las entradas no consumen corriente, lo que hace es mirar sus terminales de entrada y girar su terminal 
+de salida para que la red de retroalimentación externa lleve el diferencial de entrada a cero
+
+2.f-->No veo ninguna tercera regla de oro en el texto
+
+2.g-->la entrada negativa es la inversora, y la positiva la no inversora
+
+2.h-->fuente dividida, entre +/- 15 volts cc
+
+2.i-->con retro positiva se puede convertir en un oscilador
+
+----------------
+ Language Focus
+----------------
+
+(s+v)
+
+
+
+----------------
+ Part 2
+----------------
+i don´t understand
+
+
+
