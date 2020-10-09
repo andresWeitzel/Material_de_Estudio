@@ -1,1 +1,33 @@
-<zx<xz<x
+========================
+  Reading Comprenhension
+=========================
+
+1)
+
+ 1 with d
+
+ 2 with b
+ 
+ 3 with a
+
+ 4 with c
+
+2)
+
+2.a-->Por la diversidad de tareas que el ser humano puede realizar, inteligencia, etc.
+
+2.b-->El mas comun es el estacionario, los estacionarios requieren una precision/robustes  mayor ya que son estos
+los que en su gran mayoria se encuentran en fabricas de produccion, los moviles un sistema menos robusto pero mejor desarrollado
+ya que se debe considerar el espacio de aplicacion junto con el margen de error de desplazamiento, estabilidad, etc.
+
+2.c-->se remonta en los ´40(segun el autor) y de un autor de un cuento de ciencia ficcion.
+
+2.d-->se controlaban de forma remota fuera del escenario
+
+2.e-->no, hay autonomos, semi autonomos y completamente dependientes
+
+2.f-->es un tipo de robot que es manipulado por un operario de forma remota
+
+2.g-->cambio radical, la electronica moderna, con el avance del internet y redes lleva un libro completo compararlo
+
+2.i-->el proposito no era crear un robot autonomo, sino promover el desarrollo de maquinas antropomorficas ciberneticas. 
