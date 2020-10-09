@@ -1,0 +1,172 @@
+==================
+=====Robotics=====
+==================
+
+------------------
+   Switch on
+------------------
+1)
+10-a
+9-f
+8-b
+7-h
+6-i
+5-j
+4-c
+3-j
+2-d
+1-e
+
+
+-----------------
+    Reading
+-----------------
+1)
+
+smoke detectors->high concentration of co2, etc
+
+flood detector->water level
+
+temperature detector->abrupt change in temperature
+
+sismos detector->movement of tectonic plates, etc.
+
+many more.
+
+2)
+
+r1/thermistor/15k
+
+r2/resistor/100k
+
+r3/resistor/10k
+
+r4/resistor/10k
+
+r5/resistor/270k
+
+r6/resistor/4.7k
+
+r7/resistor/1k
+
+d1/diode/in4148
+
+q1/transistor/bc107b
+
+sw1/switch/12vc
+
+u1/operation amplifier/ua741
+
+
+3)
+
+a->6
+
+b->5
+
+c->4
+
+d->2
+
+e->7
+
+f->1
+
+g->3
+
+
+-----------------
+ Language spot
+-----------------
+1)
+
+1.1-> Digital electronics,   which
+ is used in everything from watches to computers, it is concerned with electrical 
+systems mad up of a series of switches
+
+
+1.2->walter brattain, who worked at bell laboratories, was one of three inventors 
+of the transistor
+
+1.3->a bit, which is short for binary digit, is a single unit of information
+
+1.4->lithium batteries, which are often used in cameras, are used in watches and many
+electronics displays
+
+1.5->leds, which means light-emitting diodes, is an important component of some semiconductors
+
+1.6->ohm,volta, and ampere, who were pionners in the study of electricity,
+are remembered in the basic units of electricity
+  
+
+2)
+
+2.1->..which measures...
+
+2.2->..trips until an excess..
+
+2.3->..solar cell, which generates..
+
+2.4->?
+
+2.5->don´t you touch memory chips until mke sure you are earthed
+
+2.6->..of sizes, which d-type connectors are widely..
+
+2.7->..switch,which uses..
+
+2.8->?
+
+2.9->..detected, when is amplified..
+
+2.10->..instrument, which provides an easy..
+
+3)
+
+A)
+
+3.1->..value ..
+
+3.2->.. temperature ..
+
+3.3->.. conduct..
+
+3.4->.. on ..
+
+3.5->.. of..
+
+3.6->.. current ..
+
+3.7->.. diode..
+
+3.8->..switch ..
+
+3.9->.. circuit..
+
+3.10->..rise ..
+
+3.11->.. light ..
+
+3.12->.. on..
+
+
+B)
+
+
+3.1->..transistor ..
+
+3.2->.. diode ..
+
+3.3->.. resistor..
+
+3.4->.. battery..
+
+3.5->.. contacts..
+
+3.6->.. circuit ..
+
+3.7->.. rises..
+
+3.8->..flow ..
+
+
