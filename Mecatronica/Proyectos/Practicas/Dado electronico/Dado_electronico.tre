@@ -1,0 +1,8 @@
+ÀÄDado_electronico
+   ÀÄMAIN  0/60  Ram=1
+      ÃÄ??0??
+      ÃÄsrand  0/9  Ram=4
+      ÃÄrand  0/62  Ram=4
+      ³  ÃÄ@MUL3232  0/42  Ram=13
+      ³  ÀÄ@DIV1616  0/37  Ram=5
+      ÀÄ@delay_ms1  0/21  Ram=1

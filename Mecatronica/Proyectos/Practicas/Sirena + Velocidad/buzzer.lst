@@ -1,0 +1,118 @@
+CCS PCM C Compiler, Version 4.023, 25097               29-abr-14 19:05
+
+               Filename: C:\Users\Hernan\Desktop\prueba 3\buzzer.lst
+
+               ROM used: 63 words (6%)
+                         Largest free fragment is 961
+               RAM used: 6 (9%) at main() level
+                         7 (10%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+.................... //Activa sirena, cada vez más rapido 
+....................  
+.................... #include "buzzer.h" 
+.................... #include <16F84A.h> 
+.................... //////// Standard Header file for the PIC16F84A device //////////////// 
+.................... #device PIC16F84A 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES XT                    	//Crystal osc <= 4mhz 
+.................... #FUSES NOPUT                 	//No Power Up Timer 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+....................  
+.................... #use delay(clock=4000000) 
+0004:  MOVLW  13
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  0D
+000C:  CLRF   0C
+000D:  DECFSZ 0C,F
+000E:  GOTO   00D
+000F:  DECFSZ 0D,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  0C
+0013:  DECFSZ 0C,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETLW  00
+....................  
+....................  
+....................  
+....................  
+.................... void main(void) 
+.................... { 
+0019:  CLRF   04
+001A:  BCF    03.7
+001B:  MOVLW  1F
+001C:  ANDWF  03,F
+....................    int tiempo = 1000; 
+001D:  MOVLW  E8
+001E:  MOVWF  12
+....................     
+....................    set_tris_b(0b00000000); 
+001F:  MOVLW  00
+0020:  TRIS   6
+....................    set_tris_a(0b00000); 
+0021:  TRIS   5
+....................    output_b(0x00); 
+0022:  BSF    03.5
+0023:  CLRF   06
+0024:  BCF    03.5
+0025:  CLRF   06
+....................  
+....................    while(true) 
+....................    { 
+....................       while(tiempo>0) 
+....................       { 
+0026:  MOVF   12,F
+0027:  BTFSC  03.2
+0028:  GOTO   03B
+....................          output_a(0b00110); 
+0029:  BSF    03.5
+002A:  CLRF   05
+002B:  MOVLW  06
+002C:  BCF    03.5
+002D:  MOVWF  05
+....................          delay_ms(tiempo); 
+002E:  MOVF   12,W
+002F:  MOVWF  13
+0030:  CALL   004
+....................          output_a(0b00000); 
+0031:  BSF    03.5
+0032:  CLRF   05
+0033:  BCF    03.5
+0034:  CLRF   05
+....................          delay_ms(tiempo); 
+0035:  MOVF   12,W
+0036:  MOVWF  13
+0037:  CALL   004
+....................           
+....................          tiempo = tiempo - 5; 
+0038:  MOVLW  05
+0039:  SUBWF  12,F
+....................       } 
+003A:  GOTO   026
+....................       tiempo = 1000; 
+003B:  MOVLW  E8
+003C:  MOVWF  12
+....................    } 
+003D:  GOTO   026
+.................... } 
+003E:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF9   XT NOWDT NOPUT NOPROTECT

@@ -1,0 +1,49 @@
+
+ROM used: 94 (9%)
+          94 (9%) including unused fragments
+
+          1 Average locations per line
+          7 Average locations per statement
+
+RAM used: 17 (25%) at main() level
+          18 (26%) worst case
+
+Stack used: 1 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   28    13 100  7 segmentos con boton e impares.c
+   11     0   0  7 segmentos con boton e impares.h
+  113     0   0  ..\..\..\..\Program Files\PICC\devices\16F84A.h
+----- -----
+  152    13 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21  22   1             @delay_ms1
+0     69  73   1   238  4.5  main
+
+Program metrics:
+    Functions               1
+    Statements              13
+    Comments                36
+    Volume (V)              240
+    Difficilty (D)          4.3
+    Effort to implement (E) 1036
+    Time to implement (T)   1 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    107
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-003FF    90  930  
+
+
+
+THE FOLLOWING IS TEMPORARY FOR DIAGNOSTIC USE ONLY:
+
+    n1    n2    N1    N2   v(G)
+     0     1     0     0     0    @delay_ms1
+    10    21    29    19     1    main

@@ -1,0 +1,66 @@
+004-005 @READ_PROGRAM_MEMORY.P1
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @SCRATCH
+00F     @SCRATCH
+010     @SCRATCH
+011-012 strtok.save
+013-016 _Randseed
+017-020 vector
+021     j
+022-025 srand.seed
+022-025 @MUL3232.P1
+022     rand.@SCRATCH
+022     MAIN.@SCRATCH
+023     @delay_ms1.P1
+023     rand.@SCRATCH
+024     rand.@SCRATCH
+025-026 @DIV1616.P1
+025     rand.@SCRATCH
+026-029 @MUL3232.P1
+027-028 @DIV1616.P1
+029     @DIV1616.@SCRATCH
+02A     @MUL3232.@SCRATCH
+02B     @MUL3232.@SCRATCH
+02C     @MUL3232.@SCRATCH
+02D     @MUL3232.@SCRATCH
+02E     @MUL3232.@SCRATCH
+10D     @READ_PROGRAM_MEMORY.P1
+10F     @READ_PROGRAM_MEMORY.P1
+
+009A  @delay_ms1
+000D  @MUL3232
+005C  rand
+0037  @DIV1616
+0004  srand
+00AF  MAIN
+00AF  @cinit
+
+Project Files:
+    Dado_electronico.c
+    Dado_electronico.h
+    ..\..\..\..\Program Files\PICC\devices\16F84A.h
+    ..\..\..\..\Program Files\PICC\drivers\STDLIB.H
+    ..\..\..\..\Program Files\PICC\drivers\stddef.h
+    ..\..\..\..\Program Files\PICC\drivers\string.h
+    ..\..\..\..\Program Files\PICC\drivers\ctype.h
+
+Units:
+    C:\Users\Hernan\Desktop\Dado electronico\Dado_electronico.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F84A
+    Pointer Size:   16
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\Hernan\Desktop\Dado electronico\Dado_electronico.err
+    Ext Symbols: C:\Users\Hernan\Desktop\Dado electronico\Dado_electronico.esym
+    INHX8:       C:\Users\Hernan\Desktop\Dado electronico\Dado_electronico.hex
+    Symbols:     C:\Users\Hernan\Desktop\Dado electronico\Dado_electronico.sym
+    List:        C:\Users\Hernan\Desktop\Dado electronico\Dado_electronico.lst
+    Debug/COFF:  C:\Users\Hernan\Desktop\Dado electronico\Dado_electronico.cof
+    Call Tree:   Dado_electronico.tre
+    Statistics:  Dado_electronico.sta

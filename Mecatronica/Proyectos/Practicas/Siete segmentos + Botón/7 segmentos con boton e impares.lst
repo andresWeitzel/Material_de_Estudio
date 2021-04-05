@@ -1,0 +1,153 @@
+CCS PCM C Compiler, Version 4.023, 25097               13-may-14 18:10
+
+               Filename: C:\Users\Hernan\Desktop\Proyecto 7\7 segmentos con boton e impares.lst
+
+               ROM used: 94 words (9%)
+                         Largest free fragment is 930
+               RAM used: 17 (25%) at main() level
+                         18 (26%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+.................... #include "C:\Users\Hernan\Desktop\Proyecto 7\7 segmentos con boton e impares.h" 
+.................... #include <16F84A.h> 
+.................... //////// Standard Header file for the PIC16F84A device //////////////// 
+.................... #device PIC16F84A 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES XT                    	//Crystal osc <= 4mhz 
+.................... #FUSES NOPUT                 	//No Power Up Timer 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+....................  
+.................... #use delay(clock=4000000) 
+0004:  MOVLW  1D
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  0D
+000C:  CLRF   0C
+000D:  DECFSZ 0C,F
+000E:  GOTO   00D
+000F:  DECFSZ 0D,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  0C
+0013:  DECFSZ 0C,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  GOTO   04D (RETURN)
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_A3,rcv=PIN_A2,bits=8) 
+....................  
+....................  
+....................  
+.................... int vector[10]={0b01111110,0b00010010,0b10111100,0b10110110,0b11010010,0b11100110,0b11101110,0b00110010,0b11111110,0b11110010}; 
+*
+0021:  MOVLW  7E
+0022:  MOVWF  11
+0023:  MOVLW  12
+0024:  MOVWF  12
+0025:  MOVLW  BC
+0026:  MOVWF  13
+0027:  MOVLW  B6
+0028:  MOVWF  14
+0029:  MOVLW  D2
+002A:  MOVWF  15
+002B:  MOVLW  E6
+002C:  MOVWF  16
+002D:  MOVLW  EE
+002E:  MOVWF  17
+002F:  MOVLW  32
+0030:  MOVWF  18
+0031:  MOVLW  FE
+0032:  MOVWF  19
+0033:  MOVLW  F2
+0034:  MOVWF  1A
+.................... int j=1; 
+0035:  MOVLW  01
+0036:  MOVWF  1B
+.................... void main() 
+.................... { 
+*
+0019:  CLRF   04
+001A:  BCF    03.7
+001B:  MOVLW  1F
+001C:  ANDWF  03,F
+001D:  BSF    03.5
+001E:  BCF    05.3
+001F:  BCF    03.5
+0020:  BSF    05.3
+....................    set_tris_a(0b00000); 
+*
+0037:  MOVLW  00
+0038:  TRIS   5
+....................    set_tris_b(0b00000001); 
+0039:  MOVLW  01
+003A:  TRIS   6
+....................     
+....................    while(true) 
+....................    {   
+....................      j = 1; 
+003B:  MOVLW  01
+003C:  MOVWF  1B
+....................      while(j<10) 
+....................       { 
+003D:  MOVF   1B,W
+003E:  SUBLW  09
+003F:  BTFSS  03.0
+0040:  GOTO   05C
+....................          if(input(pin_b0))    //0b00000001 
+0041:  BSF    03.5
+0042:  BSF    06.0
+0043:  BCF    03.5
+0044:  BTFSS  06.0
+0045:  GOTO   050
+....................          { 
+....................             j=j+2; 
+0046:  MOVLW  02
+0047:  ADDWF  1B,F
+....................             delay_ms(1000); 
+0048:  MOVLW  04
+0049:  MOVWF  1C
+004A:  MOVLW  FA
+004B:  MOVWF  1D
+004C:  GOTO   004
+004D:  DECFSZ 1C,F
+004E:  GOTO   04A
+....................          } 
+....................        
+....................          else 
+004F:  GOTO   05B
+....................          { 
+....................             output_b(vector[j]); 
+0050:  MOVLW  11
+0051:  ADDWF  1B,W
+0052:  MOVWF  04
+0053:  BCF    03.7
+0054:  MOVF   00,W
+0055:  MOVWF  1C
+0056:  BSF    03.5
+0057:  CLRF   06
+0058:  BCF    03.5
+0059:  MOVF   1C,W
+005A:  MOVWF  06
+....................          } 
+....................       } 
+005B:  GOTO   03D
+....................    } 
+005C:  GOTO   03B
+.................... } 
+005D:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF9   XT NOWDT NOPUT NOPROTECT

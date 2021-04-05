@@ -1,0 +1,116 @@
+CCS PCM C Compiler, Version 4.023, 25097               15-jul-14 17:00
+
+               Filename: C:\Users\Alumno\Desktop\Mecatronica\PICS\Pruebas - Liceo\Boton, luz verde\condicion.lst
+
+               ROM used: 62 words (6%)
+                         Largest free fragment is 962
+               RAM used: 6 (9%) at main() level
+                         7 (10%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+.................... //Cuando aprieto el boton, se prende la luz verde; cuando lo suelto, luz roja y Sirena 
+....................  
+.................... #include "condicion.h" 
+.................... #include <16F84A.h> 
+.................... //////// Standard Header file for the PIC16F84A device //////////////// 
+.................... #device PIC16F84A 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES XT                    	//Crystal osc <= 4mhz 
+.................... #FUSES NOPUT                 	//No Power Up Timer 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+....................  
+.................... #use delay(clock=4000000) 
+0004:  MOVLW  13
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  0D
+000C:  CLRF   0C
+000D:  DECFSZ 0C,F
+000E:  GOTO   00D
+000F:  DECFSZ 0D,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  0C
+0013:  DECFSZ 0C,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  GOTO   030 (RETURN)
+....................  
+....................  
+....................  
+....................  
+.................... void main() 
+.................... { 
+0019:  CLRF   04
+001A:  BCF    03.7
+001B:  MOVLW  1F
+001C:  ANDWF  03,F
+....................    set_tris_a(0b00000); 
+001D:  MOVLW  00
+001E:  TRIS   5
+....................    set_tris_b(0b00000001); 
+001F:  MOVLW  01
+0020:  TRIS   6
+....................     
+....................    while(1) 
+....................    { 
+....................       if( input(pin_b0))  //cuando pulse el boton 
+0021:  BSF    03.5
+0022:  BSF    06.0
+0023:  BCF    03.5
+0024:  BTFSS  06.0
+0025:  GOTO   033
+....................       { 
+....................          output_a(0b10001);   //prendo led verde 
+0026:  BSF    03.5
+0027:  CLRF   05
+0028:  MOVLW  11
+0029:  BCF    03.5
+002A:  MOVWF  05
+....................          delay_ms(3000); 
+002B:  MOVLW  0C
+002C:  MOVWF  12
+002D:  MOVLW  FA
+002E:  MOVWF  13
+002F:  GOTO   004
+0030:  DECFSZ 12,F
+0031:  GOTO   02D
+....................       } 
+....................        
+....................       else 
+0032:  GOTO   03C
+....................       { 
+....................          output_a(0b00110);  //prendo luz roja y sirena 
+0033:  BSF    03.5
+0034:  CLRF   05
+0035:  MOVLW  06
+0036:  BCF    03.5
+0037:  MOVWF  05
+....................          output_a(0b00000);  //se apaga todo 
+0038:  BSF    03.5
+0039:  CLRF   05
+003A:  BCF    03.5
+003B:  CLRF   05
+....................       } 
+....................    } 
+003C:  GOTO   021
+....................  
+.................... } 
+003D:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF9   XT NOWDT NOPUT NOPROTECT

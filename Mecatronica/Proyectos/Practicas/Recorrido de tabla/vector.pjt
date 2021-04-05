@@ -1,0 +1,27 @@
+[PROJECT]
+Target=vector.hex
+Development_Mode=
+Processor_Text=PIC16F84A
+ToolSuite=CCS
+Processor=0x6F84
+[vector]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=vector
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=C:\Users\Hernan\Desktop\prueba 5\vector.c
+2=
+[Target Data]
+OptionString=-p +FM
+FileList=C:\Users\Hernan\Desktop\prueba 5\vector.c
+[Units]
+Count=1
+1=vector.c (main)
+Link=0

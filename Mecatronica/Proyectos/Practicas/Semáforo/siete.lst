@@ -1,0 +1,270 @@
+CCS PCM C Compiler, Version 4.023, 25097               29-abr-14 18:55
+
+               Filename: C:\Users\Hernan\Desktop\Prueba 2\siete.lst
+
+               ROM used: 199 words (19%)
+                         Largest free fragment is 825
+               RAM used: 6 (9%) at main() level
+                         7 (10%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+.................... //Semáforo con conteo regresivo y sirena 
+....................  
+.................... #include "siete.h" 
+.................... #include <16F84A.h> 
+.................... //////// Standard Header file for the PIC16F84A device //////////////// 
+.................... #device PIC16F84A 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES XT                    	//Crystal osc <= 4mhz 
+.................... #FUSES NOPUT                 	//No Power Up Timer 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+....................  
+.................... #use delay(clock=4000000) 
+0004:  MOVLW  13
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  0D
+000C:  CLRF   0C
+000D:  DECFSZ 0C,F
+000E:  GOTO   00D
+000F:  DECFSZ 0D,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  0C
+0013:  DECFSZ 0C,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETLW  00
+....................  
+....................  
+....................  
+....................  
+.................... void main() 
+.................... { 
+0019:  CLRF   04
+001A:  BCF    03.7
+001B:  MOVLW  1F
+001C:  ANDWF  03,F
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1); 
+001D:  BSF    03.5
+001E:  MOVF   01,W
+001F:  ANDLW  C7
+0020:  IORLW  08
+0021:  MOVWF  01
+....................    set_tris_a(0b00000); 
+0022:  MOVLW  00
+0023:  TRIS   5
+....................    set_tris_b(0b00000000); 
+0024:  TRIS   6
+....................     
+....................    while(1) 
+....................    { 
+....................       output_a(0b00100);      //rojo 
+0025:  CLRF   05
+0026:  MOVLW  04
+0027:  BCF    03.5
+0028:  MOVWF  05
+....................       output_b(0b11100110);   //5 
+0029:  BSF    03.5
+002A:  CLRF   06
+002B:  MOVLW  E6
+002C:  BCF    03.5
+002D:  MOVWF  06
+....................       delay_ms(1000); 
+002E:  MOVLW  04
+002F:  MOVWF  12
+0030:  MOVLW  FA
+0031:  MOVWF  13
+0032:  CALL   004
+0033:  DECFSZ 12,F
+0034:  GOTO   030
+....................       output_b(0b11010010);   //4 
+0035:  BSF    03.5
+0036:  CLRF   06
+0037:  MOVLW  D2
+0038:  BCF    03.5
+0039:  MOVWF  06
+....................       delay_ms(1000); 
+003A:  MOVLW  04
+003B:  MOVWF  12
+003C:  MOVLW  FA
+003D:  MOVWF  13
+003E:  CALL   004
+003F:  DECFSZ 12,F
+0040:  GOTO   03C
+....................       output_b(0b10110110);   //3 
+0041:  BSF    03.5
+0042:  CLRF   06
+0043:  MOVLW  B6
+0044:  BCF    03.5
+0045:  MOVWF  06
+....................       delay_ms(1000); 
+0046:  MOVLW  04
+0047:  MOVWF  12
+0048:  MOVLW  FA
+0049:  MOVWF  13
+004A:  CALL   004
+004B:  DECFSZ 12,F
+004C:  GOTO   048
+....................       output_b(0b10111100);   //2 
+004D:  BSF    03.5
+004E:  CLRF   06
+004F:  MOVLW  BC
+0050:  BCF    03.5
+0051:  MOVWF  06
+....................       delay_ms(1000); 
+0052:  MOVLW  04
+0053:  MOVWF  12
+0054:  MOVLW  FA
+0055:  MOVWF  13
+0056:  CALL   004
+0057:  DECFSZ 12,F
+0058:  GOTO   054
+....................       output_b(0b00010010);   //1 
+0059:  BSF    03.5
+005A:  CLRF   06
+005B:  MOVLW  12
+005C:  BCF    03.5
+005D:  MOVWF  06
+....................       delay_ms(1000); 
+005E:  MOVLW  04
+005F:  MOVWF  12
+0060:  MOVLW  FA
+0061:  MOVWF  13
+0062:  CALL   004
+0063:  DECFSZ 12,F
+0064:  GOTO   060
+....................       output_b(0b00000000); 
+0065:  BSF    03.5
+0066:  CLRF   06
+0067:  BCF    03.5
+0068:  CLRF   06
+....................       output_a(0b01000);      //Prende Amarillo - Apaga rojo 
+0069:  BSF    03.5
+006A:  CLRF   05
+006B:  MOVLW  08
+006C:  BCF    03.5
+006D:  MOVWF  05
+....................       delay_ms(2000); 
+006E:  MOVWF  12
+006F:  MOVLW  FA
+0070:  MOVWF  13
+0071:  CALL   004
+0072:  DECFSZ 12,F
+0073:  GOTO   06F
+....................       output_a(0b10011);      //Apaga amarillo - Prende verde-sirena 
+0074:  BSF    03.5
+0075:  CLRF   05
+0076:  MOVLW  13
+0077:  BCF    03.5
+0078:  MOVWF  05
+....................       output_b(0b11100110);   //5 
+0079:  BSF    03.5
+007A:  CLRF   06
+007B:  MOVLW  E6
+007C:  BCF    03.5
+007D:  MOVWF  06
+....................       delay_ms(1000); 
+007E:  MOVLW  04
+007F:  MOVWF  12
+0080:  MOVLW  FA
+0081:  MOVWF  13
+0082:  CALL   004
+0083:  DECFSZ 12,F
+0084:  GOTO   080
+....................       output_b(0b11010010);   //4 
+0085:  BSF    03.5
+0086:  CLRF   06
+0087:  MOVLW  D2
+0088:  BCF    03.5
+0089:  MOVWF  06
+....................       delay_ms(1000); 
+008A:  MOVLW  04
+008B:  MOVWF  12
+008C:  MOVLW  FA
+008D:  MOVWF  13
+008E:  CALL   004
+008F:  DECFSZ 12,F
+0090:  GOTO   08C
+....................       output_b(0b10110110);   //3 
+0091:  BSF    03.5
+0092:  CLRF   06
+0093:  MOVLW  B6
+0094:  BCF    03.5
+0095:  MOVWF  06
+....................       delay_ms(1000); 
+0096:  MOVLW  04
+0097:  MOVWF  12
+0098:  MOVLW  FA
+0099:  MOVWF  13
+009A:  CALL   004
+009B:  DECFSZ 12,F
+009C:  GOTO   098
+....................       output_b(0b10111100);   //2 
+009D:  BSF    03.5
+009E:  CLRF   06
+009F:  MOVLW  BC
+00A0:  BCF    03.5
+00A1:  MOVWF  06
+....................       delay_ms(1000); 
+00A2:  MOVLW  04
+00A3:  MOVWF  12
+00A4:  MOVLW  FA
+00A5:  MOVWF  13
+00A6:  CALL   004
+00A7:  DECFSZ 12,F
+00A8:  GOTO   0A4
+....................       output_b(0b00010010);   //1 
+00A9:  BSF    03.5
+00AA:  CLRF   06
+00AB:  MOVLW  12
+00AC:  BCF    03.5
+00AD:  MOVWF  06
+....................       delay_ms(1000); 
+00AE:  MOVLW  04
+00AF:  MOVWF  12
+00B0:  MOVLW  FA
+00B1:  MOVWF  13
+00B2:  CALL   004
+00B3:  DECFSZ 12,F
+00B4:  GOTO   0B0
+....................       output_b(0b00000000); 
+00B5:  BSF    03.5
+00B6:  CLRF   06
+00B7:  BCF    03.5
+00B8:  CLRF   06
+....................       output_a(0b01000);      //apaga verde y sirena - prende amarillo 
+00B9:  BSF    03.5
+00BA:  CLRF   05
+00BB:  MOVLW  08
+00BC:  BCF    03.5
+00BD:  MOVWF  05
+....................       delay_ms(2000); 
+00BE:  MOVWF  12
+00BF:  MOVLW  FA
+00C0:  MOVWF  13
+00C1:  CALL   004
+00C2:  DECFSZ 12,F
+00C3:  GOTO   0BF
+....................    } 
+00C4:  BSF    03.5
+00C5:  GOTO   025
+.................... } 
+00C6:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF9   XT NOWDT NOPUT NOPROTECT

@@ -1,0 +1,61 @@
+
+ROM used: 235 (23%)
+          235 (23%) including unused fragments
+
+          0 Average locations per line
+          0 Average locations per statement
+
+RAM used: 23 (34%) at main() level
+          35 (51%) worst case
+
+Stack used: 2 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   19     8   2  Dado_electronico.c
+   10     0   0  Dado_electronico.h
+  113     0   0  ..\..\..\..\Program Files\PICC\devices\16F84A.h
+  874   389  74  ..\..\..\..\Program Files\PICC\drivers\STDLIB.H
+   28     0   0  ..\..\..\..\Program Files\PICC\drivers\stddef.h
+  417   126  24  ..\..\..\..\Program Files\PICC\drivers\string.h
+   28     0   0  ..\..\..\..\Program Files\PICC\drivers\ctype.h
+----- -----
+ 1489   523 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   9   1             @delay_ms1
+0     42  18  13             @MUL3232
+0     62  26   4   101  3.8  rand
+0     37  16   5             @DIV1616
+0      9   4   4    30  1.7  srand
+0     60  26   1   147  2.6  MAIN
+
+Program metrics:
+    Functions               3
+    Statements              523
+    Comments                793
+    Volume (V)              377
+    Difficilty (D)          7.4
+    Effort to implement (E) 2811
+    Time to implement (T)   3 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    65
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-003FF   231  789  
+
+
+
+THE FOLLOWING IS TEMPORARY FOR DIAGNOSTIC USE ONLY:
+
+    n1    n2    N1    N2   v(G)
+     0     1     0     0     0    @delay_ms1
+     0     1     0     0     0    @MUL3232
+     9    12    13    10     0    rand
+     0     1     0     0     0    @DIV1616
+     4     6     4     5     0    srand
+     6    16    19    14     0    MAIN

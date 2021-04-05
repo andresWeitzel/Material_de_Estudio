@@ -1,0 +1,102 @@
+CCS PCM C Compiler, Version 4.023, 25097               15-jul-14 18:44
+
+               Filename: D:\Mis Cosas\Mis documentos\MECATRONICA\PICS\PRUEBAS - CCS\Pruebas - Liceo\Sirena-Etiquetas\sirena_etiqueta.lst
+
+               ROM used: 56 words (5%)
+                         Largest free fragment is 968
+               RAM used: 6 (9%) at main() level
+                         7 (10%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+.................... #include "D:\Mis Cosas\Mis documentos\MECATRONICA\PICS\PRUEBAS - CCS\Pruebas - Liceo\Sirena-Etiquetas\sirena_etiqueta.h" 
+.................... #include <16F84A.h> 
+.................... //////// Standard Header file for the PIC16F84A device //////////////// 
+.................... #device PIC16F84A 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES XT                    	//Crystal osc <= 4mhz 
+.................... #FUSES PUT                   	//Power Up Timer 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+....................  
+.................... #use delay(clock=4000000) 
+0004:  MOVLW  13
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  0D
+000C:  CLRF   0C
+000D:  DECFSZ 0C,F
+000E:  GOTO   00D
+000F:  DECFSZ 0D,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  0C
+0013:  DECFSZ 0C,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETLW  00
+....................  
+....................  
+....................  
+.................... #define sirena PIN_A1 
+....................  
+....................  
+.................... void main() 
+.................... {   
+0019:  CLRF   04
+001A:  BCF    03.7
+001B:  MOVLW  1F
+001C:  ANDWF  03,F
+....................    set_tris_a(0b00000); 
+001D:  MOVLW  00
+001E:  TRIS   5
+....................    set_tris_b(0b00000000); 
+001F:  TRIS   6
+....................     
+....................    while(true) 
+....................    { 
+....................       output_high(sirena); 
+0020:  BSF    03.5
+0021:  BCF    05.1
+0022:  BCF    03.5
+0023:  BSF    05.1
+....................       delay_ms(1000); 
+0024:  MOVLW  04
+0025:  MOVWF  12
+0026:  MOVLW  FA
+0027:  MOVWF  13
+0028:  CALL   004
+0029:  DECFSZ 12,F
+002A:  GOTO   026
+....................       output_low(sirena); 
+002B:  BSF    03.5
+002C:  BCF    05.1
+002D:  BCF    03.5
+002E:  BCF    05.1
+....................       delay_ms(1000); 
+002F:  MOVLW  04
+0030:  MOVWF  12
+0031:  MOVLW  FA
+0032:  MOVWF  13
+0033:  CALL   004
+0034:  DECFSZ 12,F
+0035:  GOTO   031
+....................    } 
+0036:  GOTO   020
+.................... } 
+0037:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF1   XT NOWDT PUT NOPROTECT

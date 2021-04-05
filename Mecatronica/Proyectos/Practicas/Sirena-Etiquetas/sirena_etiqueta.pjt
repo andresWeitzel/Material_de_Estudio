@@ -1,0 +1,27 @@
+[PROJECT]
+Target=sirena_etiqueta.hex
+Development_Mode=
+Processor_Text=PIC16F84A
+ToolSuite=CCS
+Processor=0x6F84
+[sirena_etiqueta]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=sirena_etiqueta
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=D:\Mis Cosas\Mis documentos\MECATRONICA\PICS\PRUEBAS - CCS\Pruebas - Liceo\Sirena-Etiquetas\sirena_etiqueta.c
+2=
+[Target Data]
+OptionString=-p +FM
+FileList=D:\Mis Cosas\Mis documentos\MECATRONICA\PICS\PRUEBAS - CCS\Pruebas - Liceo\Sirena-Etiquetas\sirena_etiqueta.c
+[Units]
+Count=1
+1=sirena_etiqueta.c (main)
+Link=0

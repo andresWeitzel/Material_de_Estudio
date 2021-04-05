@@ -1,0 +1,39 @@
+004-005 @READ_PROGRAM_MEMORY.P1
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @SCRATCH
+00F     @SCRATCH
+010     @SCRATCH
+012     main.@SCRATCH
+013     @delay_ms1.P1
+10D     @READ_PROGRAM_MEMORY.P1
+10F     @READ_PROGRAM_MEMORY.P1
+
+0004  @delay_ms1
+0019  main
+0019  @cinit
+
+Project Files:
+    sirena_etiqueta.c
+    sirena_etiqueta.h
+    C:\Program Files\PICC\devices\16F84A.h
+
+Units:
+    D:\Mis Cosas\Mis documentos\MECATRONICA\PICS\PRUEBAS - CCS\Pruebas - Liceo\Sirena-Etiquetas\sirena_etiqueta.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F84A
+    Pointer Size:   16
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      D:\Mis Cosas\Mis documentos\MECATRONICA\PICS\PRUEBAS - CCS\Pruebas - Liceo\Sirena-Etiquetas\sirena_etiqueta.err
+    Ext Symbols: D:\Mis Cosas\Mis documentos\MECATRONICA\PICS\PRUEBAS - CCS\Pruebas - Liceo\Sirena-Etiquetas\sirena_etiqueta.esym
+    INHX8:       D:\Mis Cosas\Mis documentos\MECATRONICA\PICS\PRUEBAS - CCS\Pruebas - Liceo\Sirena-Etiquetas\sirena_etiqueta.hex
+    Symbols:     D:\Mis Cosas\Mis documentos\MECATRONICA\PICS\PRUEBAS - CCS\Pruebas - Liceo\Sirena-Etiquetas\sirena_etiqueta.sym
+    List:        D:\Mis Cosas\Mis documentos\MECATRONICA\PICS\PRUEBAS - CCS\Pruebas - Liceo\Sirena-Etiquetas\sirena_etiqueta.lst
+    Debug/COFF:  D:\Mis Cosas\Mis documentos\MECATRONICA\PICS\PRUEBAS - CCS\Pruebas - Liceo\Sirena-Etiquetas\sirena_etiqueta.cof
+    Call Tree:   sirena_etiqueta.tre
+    Statistics:  sirena_etiqueta.sta

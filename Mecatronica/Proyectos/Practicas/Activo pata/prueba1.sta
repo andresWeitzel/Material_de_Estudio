@@ -1,0 +1,49 @@
+
+ROM used: 57 (6%)
+          57 (6%) including unused fragments
+
+          0 Average locations per line
+          7 Average locations per statement
+
+RAM used: 6 (9%) at main() level
+          7 (10%) worst case
+
+Stack used: 1 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   26     8 100  prueba1.c
+   10     0   0  prueba1.h
+  113     0   0  ..\..\..\..\Program Files\PICC\devices\16F84A.h
+----- -----
+  149     8 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21  37   1             @delay_ms1
+0     32  56   1   127  1.7  main
+
+Program metrics:
+    Functions               1
+    Statements              8
+    Comments                44
+    Volume (V)              130
+    Difficilty (D)          1.6
+    Effort to implement (E) 211
+    Time to implement (T)   0 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    74
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-003FF    53  967  
+
+
+
+THE FOLLOWING IS TEMPORARY FOR DIAGNOSTIC USE ONLY:
+
+    n1    n2    N1    N2   v(G)
+     0     1     0     0     0    @delay_ms1
+     4    15    17    13     0    main

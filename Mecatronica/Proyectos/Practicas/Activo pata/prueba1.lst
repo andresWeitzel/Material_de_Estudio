@@ -1,0 +1,110 @@
+CCS PCM C Compiler, Version 4.023, 25097               29-abr-14 18:53
+
+               Filename: C:\Users\Hernan\Desktop\prueba 1\prueba1.lst
+
+               ROM used: 57 words (6%)
+                         Largest free fragment is 967
+               RAM used: 6 (9%) at main() level
+                         7 (10%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+.................... //Activa una pata del micro durante 2 segundo y la mantiene inactiva por otros 2 segundos 
+.................... //Repite c{iclicamente 
+....................  
+.................... #include "prueba1.h" 
+.................... #include <16F84A.h> 
+.................... //////// Standard Header file for the PIC16F84A device //////////////// 
+.................... #device PIC16F84A 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES XT                    	//Crystal osc <= 4mhz 
+.................... #FUSES NOPUT                 	//No Power Up Timer 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+....................  
+.................... #use delay(clock=4000000) 
+0004:  MOVLW  13
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  0D
+000C:  CLRF   0C
+000D:  DECFSZ 0C,F
+000E:  GOTO   00D
+000F:  DECFSZ 0D,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  0C
+0013:  DECFSZ 0C,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETLW  00
+....................  
+....................  
+....................  
+.................... void main() 
+.................... { 
+0019:  CLRF   04
+001A:  BCF    03.7
+001B:  MOVLW  1F
+001C:  ANDWF  03,F
+....................   set_tris_a(0b00000);               //aviso que vamos a usar todos los puertos como salida 
+001D:  MOVLW  00
+001E:  TRIS   5
+....................   set_tris_b(0b00000000); 
+001F:  TRIS   6
+....................     
+....................     
+....................    while(1) 
+....................    { 
+....................       output_a(0b00100);      //Prende A2 
+0020:  BSF    03.5
+0021:  CLRF   05
+0022:  MOVLW  04
+0023:  BCF    03.5
+0024:  MOVWF  05
+....................       delay_ms(2000); 
+0025:  MOVLW  08
+0026:  MOVWF  12
+0027:  MOVLW  FA
+0028:  MOVWF  13
+0029:  CALL   004
+002A:  DECFSZ 12,F
+002B:  GOTO   027
+....................       output_a(0b00000);      //Apaga A2 
+002C:  BSF    03.5
+002D:  CLRF   05
+002E:  BCF    03.5
+002F:  CLRF   05
+....................       delay_ms(2000); 
+0030:  MOVLW  08
+0031:  MOVWF  12
+0032:  MOVLW  FA
+0033:  MOVWF  13
+0034:  CALL   004
+0035:  DECFSZ 12,F
+0036:  GOTO   032
+....................    } 
+0037:  GOTO   020
+....................     
+.................... } 
+....................     
+....................     
+....................   
+....................    
+....................    
+0038:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF9   XT NOWDT NOPUT NOPROTECT

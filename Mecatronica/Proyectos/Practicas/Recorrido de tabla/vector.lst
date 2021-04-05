@@ -1,0 +1,134 @@
+CCS PCM C Compiler, Version 4.023, 25097               22-abr-14 19:27
+
+               Filename: C:\Users\Hernan\Desktop\prueba 5\vector.lst
+
+               ROM used: 81 words (8%)
+                         Largest free fragment is 943
+               RAM used: 17 (25%) at main() level
+                         18 (26%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+.................... #include "C:\Users\Hernan\Desktop\prueba 5\vector.h" 
+.................... #include <16F84A.h> 
+.................... //////// Standard Header file for the PIC16F84A device //////////////// 
+.................... #device PIC16F84A 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES XT                    	//Crystal osc <= 4mhz 
+.................... #FUSES NOPUT                 	//No Power Up Timer 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+....................  
+.................... #use delay(clock=4000000) 
+0004:  MOVLW  1D
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  0D
+000C:  CLRF   0C
+000D:  DECFSZ 0C,F
+000E:  GOTO   00D
+000F:  DECFSZ 0D,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  0C
+0013:  DECFSZ 0C,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  GOTO   04A (RETURN)
+....................  
+....................  
+....................  
+....................  
+.................... int medina[10] = {0b00010010,0b10111100,0b10110110,0b11010010,0b11100110,0b11101110,0b00110010,0b11111110,0b11110110,0b01111110}; 
+*
+001D:  MOVLW  12
+001E:  MOVWF  11
+001F:  MOVLW  BC
+0020:  MOVWF  12
+0021:  MOVLW  B6
+0022:  MOVWF  13
+0023:  MOVLW  D2
+0024:  MOVWF  14
+0025:  MOVLW  E6
+0026:  MOVWF  15
+0027:  MOVLW  EE
+0028:  MOVWF  16
+0029:  MOVLW  32
+002A:  MOVWF  17
+002B:  MOVLW  FE
+002C:  MOVWF  18
+002D:  MOVLW  F6
+002E:  MOVWF  19
+002F:  MOVLW  7E
+0030:  MOVWF  1A
+.................... int j=0; 
+0031:  CLRF   1B
+....................  
+.................... void main() 
+.................... { 
+*
+0019:  CLRF   04
+001A:  BCF    03.7
+001B:  MOVLW  1F
+001C:  ANDWF  03,F
+....................    set_tris_a(0b00000); 
+*
+0032:  MOVLW  00
+0033:  TRIS   5
+....................    set_tris_b(0b00000000); 
+0034:  TRIS   6
+....................     
+....................    while(1) 
+....................    { 
+....................       j=0; 
+0035:  CLRF   1B
+....................       while(j<10) 
+....................       { 
+0036:  MOVF   1B,W
+0037:  SUBLW  09
+0038:  BTFSS  03.0
+0039:  GOTO   04F
+....................          output_b(medina[j]); 
+003A:  MOVLW  11
+003B:  ADDWF  1B,W
+003C:  MOVWF  04
+003D:  BCF    03.7
+003E:  MOVF   00,W
+003F:  MOVWF  1C
+0040:  BSF    03.5
+0041:  CLRF   06
+0042:  BCF    03.5
+0043:  MOVF   1C,W
+0044:  MOVWF  06
+....................          delay_ms(1000); 
+0045:  MOVLW  04
+0046:  MOVWF  1C
+0047:  MOVLW  FA
+0048:  MOVWF  1D
+0049:  GOTO   004
+004A:  DECFSZ 1C,F
+004B:  GOTO   047
+....................          j=j+2; 
+004C:  MOVLW  02
+004D:  ADDWF  1B,F
+....................       } 
+004E:  GOTO   036
+....................    } 
+004F:  GOTO   035
+.................... } 
+0050:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF9   XT NOWDT NOPUT NOPROTECT

@@ -1,0 +1,39 @@
+004-005 @READ_PROGRAM_MEMORY.P1
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @SCRATCH
+00F     @SCRATCH
+010     @SCRATCH
+012     main.tiempo
+013     @delay_ms1.P1
+10D     @READ_PROGRAM_MEMORY.P1
+10F     @READ_PROGRAM_MEMORY.P1
+
+0004  @delay_ms1
+0019  main
+0019  @cinit
+
+Project Files:
+    buzzer.c
+    buzzer.h
+    ..\..\..\..\Program Files\PICC\devices\16F84A.h
+
+Units:
+    C:\Users\Hernan\Desktop\prueba 3\buzzer.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F84A
+    Pointer Size:   16
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\Hernan\Desktop\prueba 3\buzzer.err
+    Ext Symbols: C:\Users\Hernan\Desktop\prueba 3\buzzer.esym
+    INHX8:       C:\Users\Hernan\Desktop\prueba 3\buzzer.hex
+    Symbols:     C:\Users\Hernan\Desktop\prueba 3\buzzer.sym
+    List:        C:\Users\Hernan\Desktop\prueba 3\buzzer.lst
+    Debug/COFF:  C:\Users\Hernan\Desktop\prueba 3\buzzer.cof
+    Call Tree:   buzzer.tre
+    Statistics:  buzzer.sta
