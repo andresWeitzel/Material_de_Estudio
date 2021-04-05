@@ -1,0 +1,39 @@
+004-005 @READ_PROGRAM_MEMORY.P1
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @SCRATCH
+00F     @SCRATCH
+010     @SCRATCH
+012     main.@SCRATCH
+013     @delay_ms1.P1
+10D     @READ_PROGRAM_MEMORY.P1
+10F     @READ_PROGRAM_MEMORY.P1
+
+0004  @delay_ms1
+0019  main
+0019  @cinit
+
+Project Files:
+    impresora_sensor.c
+    impresora_sensor.h
+    C:\Program Files\PICC\devices\16F84A.h
+
+Units:
+    D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\impresora_sensor.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F84A
+    Pointer Size:   16
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\impresora_sensor.err
+    Ext Symbols: D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\impresora_sensor.esym
+    INHX8:       D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\impresora_sensor.hex
+    Symbols:     D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\impresora_sensor.sym
+    List:        D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\impresora_sensor.lst
+    Debug/COFF:  D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\impresora_sensor.cof
+    Call Tree:   impresora_sensor.tre
+    Statistics:  impresora_sensor.sta

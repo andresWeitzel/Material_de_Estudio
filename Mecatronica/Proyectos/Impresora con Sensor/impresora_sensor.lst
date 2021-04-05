@@ -1,0 +1,212 @@
+CCS PCM C Compiler, Version 4.023, 25097               12-ago-14 19:27
+
+               Filename: D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\impresora_sensor.lst
+
+               ROM used: 128 words (12%)
+                         Largest free fragment is 896
+               RAM used: 6 (9%) at main() level
+                         7 (10%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+....................  #include "D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\impresora_sensor.h" 
+.................... #include <16F84A.h> 
+.................... //////// Standard Header file for the PIC16F84A device //////////////// 
+.................... #device PIC16F84A 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES XT                    	//Crystal osc <= 4mhz 
+.................... #FUSES PUT                   	//Power Up Timer 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+....................  
+.................... #use delay(clock=4000000) 
+0004:  MOVLW  13
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  0D
+000C:  CLRF   0C
+000D:  DECFSZ 0C,F
+000E:  GOTO   00D
+000F:  DECFSZ 0D,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  0C
+0013:  DECFSZ 0C,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETLW  00
+....................  
+....................  
+.................... #define sensor_der pin_b3 
+.................... #define sensor_izq pin_b4 
+.................... #define finalcarr_der pin_b5 
+.................... #define finalcarr_izq pin_b6 
+.................... #define motor_der pin_b1 
+.................... #define motor_izq pin_b2 
+....................  
+.................... void main () 
+.................... {  set_tris_a(0b00000); 
+0019:  CLRF   04
+001A:  BCF    03.7
+001B:  MOVLW  1F
+001C:  ANDWF  03,F
+001D:  MOVLW  00
+001E:  TRIS   5
+....................    set_tris_b(0b00111100); 
+001F:  MOVLW  3C
+0020:  TRIS   6
+....................     
+....................     
+....................       while(1) 
+....................       { 
+....................           if(input (finalcarr_izq && !sensor_der))   //pregunto si finalcarr_izq está prendido y sensor_der está apagado 
+0021:  BTFSS  00.0
+0022:  GOTO   02C
+....................          {       
+....................            output_low(motor_der);                              //Apaga los dos motores 
+0023:  BSF    03.5
+0024:  BCF    06.1
+0025:  BCF    03.5
+0026:  BCF    06.1
+....................            output_low(motor_izq); 
+0027:  BSF    03.5
+0028:  BCF    06.2
+0029:  BCF    03.5
+002A:  BCF    06.2
+....................          } 
+....................          else if (input(finalcarr_der && !sensor_izq))  
+002B:  GOTO   07E
+002C:  BTFSS  00.0
+002D:  GOTO   037
+....................          { 
+....................             output_low(motor_der); 
+002E:  BSF    03.5
+002F:  BCF    06.1
+0030:  BCF    03.5
+0031:  BCF    06.1
+....................             output_low(motor_izq); 
+0032:  BSF    03.5
+0033:  BCF    06.2
+0034:  BCF    03.5
+0035:  BCF    06.2
+....................          } 
+....................           else if (input (sensor_der && sensor_izq)) 
+0036:  GOTO   07E
+0037:  BTFSS  00.1
+0038:  GOTO   042
+....................           { 
+....................             output_low(motor_der); 
+0039:  BSF    03.5
+003A:  BCF    06.1
+003B:  BCF    03.5
+003C:  BCF    06.1
+....................             output_low(motor_izq); 
+003D:  BSF    03.5
+003E:  BCF    06.2
+003F:  BCF    03.5
+0040:  BCF    06.2
+....................           } 
+....................           else if (input (!sensor_der  && !sensor_izq)) 
+0041:  GOTO   07E
+0042:  BTFSS  00.0
+0043:  GOTO   04D
+....................           {  output_low (motor_der); 
+0044:  BSF    03.5
+0045:  BCF    06.1
+0046:  BCF    03.5
+0047:  BCF    06.1
+....................              output_low (motor_izq); 
+0048:  BSF    03.5
+0049:  BCF    06.2
+004A:  BCF    03.5
+004B:  BCF    06.2
+....................           } 
+....................           else if (input (sensor_der)) 
+004C:  GOTO   07E
+004D:  BSF    03.5
+004E:  BSF    06.3
+004F:  BCF    03.5
+0050:  BTFSS  06.3
+0051:  GOTO   066
+....................           { 
+....................             output_low(motor_izq); 
+0052:  BSF    03.5
+0053:  BCF    06.2
+0054:  BCF    03.5
+0055:  BCF    06.2
+....................             output_high(motor_der); 
+0056:  BSF    03.5
+0057:  BCF    06.1
+0058:  BCF    03.5
+0059:  BSF    06.1
+....................             delay_ms(300); 
+005A:  MOVLW  02
+005B:  MOVWF  12
+005C:  MOVLW  96
+005D:  MOVWF  13
+005E:  CALL   004
+005F:  DECFSZ 12,F
+0060:  GOTO   05C
+....................             output_low(motor_der); 
+0061:  BSF    03.5
+0062:  BCF    06.1
+0063:  BCF    03.5
+0064:  BCF    06.1
+....................              
+....................           } 
+....................           else if (input (sensor_izq)) 
+0065:  GOTO   07E
+0066:  BSF    03.5
+0067:  BSF    06.4
+0068:  BCF    03.5
+0069:  BTFSS  06.4
+006A:  GOTO   07E
+....................           { 
+....................             output_low(motor_der); 
+006B:  BSF    03.5
+006C:  BCF    06.1
+006D:  BCF    03.5
+006E:  BCF    06.1
+....................             output_high(motor_izq); 
+006F:  BSF    03.5
+0070:  BCF    06.2
+0071:  BCF    03.5
+0072:  BSF    06.2
+....................             delay_ms(300); 
+0073:  MOVLW  02
+0074:  MOVWF  12
+0075:  MOVLW  96
+0076:  MOVWF  13
+0077:  CALL   004
+0078:  DECFSZ 12,F
+0079:  GOTO   075
+....................             output_low(motor_izq); 
+007A:  BSF    03.5
+007B:  BCF    06.2
+007C:  BCF    03.5
+007D:  BCF    06.2
+....................           } 
+....................           
+....................        
+....................        
+....................        
+....................        
+....................       } 
+007E:  GOTO   021
+.................... } 
+007F:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF1   XT NOWDT PUT NOPROTECT

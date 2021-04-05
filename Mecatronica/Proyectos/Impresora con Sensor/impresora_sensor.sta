@@ -1,0 +1,49 @@
+
+ROM used: 128 (12%)
+          128 (12%) including unused fragments
+
+          1 Average locations per line
+          4 Average locations per statement
+
+RAM used: 6 (9%) at main() level
+          7 (10%) worst case
+
+Stack used: 1 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   57    32 100  impresora_sensor.c
+   10     0   0  impresora_sensor.h
+  113     0   0  C:\Program Files\PICC\devices\16F84A.h
+----- -----
+  180    32 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21  16   1             @delay_ms1
+0    103  80   1   783  3.9  main
+
+Program metrics:
+    Functions               1
+    Statements              32
+    Comments                37
+    Volume (V)              786
+    Difficilty (D)          3.8
+    Effort to implement (E) 2976
+    Time to implement (T)   3 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   6
+    Maintainability (MI)    79
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-003FF   124  896  
+
+
+
+THE FOLLOWING IS TEMPORARY FOR DIAGNOSTIC USE ONLY:
+
+    n1    n2    N1    N2   v(G)
+     0     1     0     0     0    @delay_ms1
+     8    55    78    53     6    main

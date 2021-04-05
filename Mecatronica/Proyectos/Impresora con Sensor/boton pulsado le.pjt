@@ -1,0 +1,27 @@
+[PROJECT]
+Target=boton pulsado le.hex
+Development_Mode=
+Processor_Text=PIC16F84A
+ToolSuite=CCS
+Processor=0x6F84
+[boton pulsado le]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=boton pulsado le
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\boton pulsado le.c
+2=
+[Target Data]
+OptionString=-p +FM
+FileList=D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\boton pulsado le.c
+[Units]
+Count=1
+1=boton pulsado le.c (main)
+Link=0

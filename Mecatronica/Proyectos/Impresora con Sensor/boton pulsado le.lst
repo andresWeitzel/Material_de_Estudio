@@ -1,0 +1,108 @@
+CCS PCM C Compiler, Version 4.023, 25097               12-ago-14 20:30
+
+               Filename: D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\boton pulsado le.lst
+
+               ROM used: 54 words (5%)
+                         Largest free fragment is 970
+               RAM used: 6 (9%) at main() level
+                         7 (10%) worst case
+               Stack:    1 locations
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+.................... #include "D:\Mis Cosas\Mis documentos\MECATRONICA\Proyectos\Impresora con Sensor\Software\boton pulsado le.h" 
+.................... #include <16F84A.h> 
+.................... //////// Standard Header file for the PIC16F84A device //////////////// 
+.................... #device PIC16F84A 
+.................... #list 
+....................  
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES XT                    	//Crystal osc <= 4mhz 
+.................... #FUSES PUT                   	//Power Up Timer 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+....................  
+.................... #use delay(clock=4000000) 
+0004:  MOVLW  13
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  0D
+000C:  CLRF   0C
+000D:  DECFSZ 0C,F
+000E:  GOTO   00D
+000F:  DECFSZ 0D,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  0C
+0013:  DECFSZ 0C,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETLW  00
+....................  
+....................  
+....................  
+....................  
+.................... void main() 
+.................... {   set_tris_a(0b00000); 
+0019:  CLRF   04
+001A:  BCF    03.7
+001B:  MOVLW  1F
+001C:  ANDWF  03,F
+001D:  MOVLW  00
+001E:  TRIS   5
+....................     set_tris_b(0b00000001); 
+001F:  MOVLW  01
+0020:  TRIS   6
+....................      
+....................     while(1) 
+....................     { 
+....................      
+....................     output_a(0b10001); 
+0021:  BSF    03.5
+0022:  CLRF   05
+0023:  MOVLW  11
+0024:  BCF    03.5
+0025:  MOVWF  05
+....................     delay_ms(1000); 
+0026:  MOVLW  04
+0027:  MOVWF  12
+0028:  MOVLW  FA
+0029:  MOVWF  13
+002A:  CALL   004
+002B:  DECFSZ 12,F
+002C:  GOTO   028
+....................     output_a(0b00000); 
+002D:  BSF    03.5
+002E:  CLRF   05
+002F:  BCF    03.5
+0030:  CLRF   05
+....................     delay_ms(0b1000); 
+0031:  MOVLW  08
+0032:  MOVWF  13
+0033:  CALL   004
+....................      
+....................     
+....................      
+....................     } 
+0034:  GOTO   021
+....................      
+....................      
+....................      
+....................      
+....................      
+.................... } 
+....................  
+....................  
+0035:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF1   XT NOWDT PUT NOPROTECT
