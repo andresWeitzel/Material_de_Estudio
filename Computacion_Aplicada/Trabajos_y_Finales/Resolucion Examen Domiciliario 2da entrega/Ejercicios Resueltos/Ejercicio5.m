@@ -1,0 +1,21 @@
+pkg load image;
+tamanoMoscamm=5;
+imagen=input("Ingrese Nombre de la Imagen(""fotoejercicio5_1.jpg""): ");
+A=imread(imagen);
+Ainv=imadjust(A,[0 1],[1 0]); #Ajustes de imagen 
+Agris=rgb2gray(Ainv);         
+t=graythresh(Agris);          
+Abin=im2bw(Agris,t);
+se=strel('rectangle',[3 3]);
+Abin_dilate=imdilate(Abin,se);
+Abin_rode=imerode(Abin_dilate,se);
+[L,n]=bwlabel(Abin_rode);    
+D=regionprops(L);
+Box=D(1).BoundingBox;
+tamanoMoscaPixel=Box(4);#relacion de pixel a mm
+relacionPixelmm=tamanoMoscaPixel/tamanoMoscamm; #lo que equivale un mm en pixeles
+center=D(1).Centroid;
+dx=Box(1);#distancia hasta el centro de la mosca del borde izquierdo
+dy= center(2);#distancia hasta el centro del borde derecho
+x=dx/relacionPixelmm
+y=dy/relacionPixelmm

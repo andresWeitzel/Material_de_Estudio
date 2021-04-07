@@ -1,0 +1,121 @@
+1 AEROPARQUE AERO                                                                
+2 AZUL AERO                                                                      
+3 BAHIA BLANCA AERO                                                              
+4 BARILOCHE AERO                                                                 
+5 BASE BELGRANO II                                                               
+6 BASE CARLINI (EX JUBANY)                                                       
+7 BASE ESPERANZA                                                                 
+8 BASE MARAMBIO                                                                  
+9 BASE ORCADAS                                                                   
+10 BASE SAN MARTIN                                                                
+11 BENITO JUAREZ AERO                                                             
+12 BERNARDO DE IRIGOYEN AERO                                                      
+13 BOLIVAR AERO                                                                   
+14 BUENOS AIRES OBSERVATORIO                                                      
+15 CAMPO DE MAYO AERO                                                             
+16 CATAMARCA AERO                                                                 
+17 CERES AERO                                                                     
+18 CHAMICAL AERO                                                                  
+19 CHAPELCO AERO                                                                  
+20 CHEPES                                                                         
+21 CHILECITO AERO                                                                 
+22 CIPOLLETTI                                                                     
+23 COMODORO RIVADAVIA AERO                                                        
+24 CONCORDIA AERO                                                                 
+25 CORDOBA AERO                                                                   
+26 CORDOBA OBSERVATORIO                                                           
+27 CORONEL PRINGLES AERO                                                          
+28 CORONEL SUAREZ AERO                                                            
+29 CORRIENTES AERO                                                                
+30 DOLORES AERO                                                                   
+31 EL BOLSON AERO                                                                 
+32 EL CALAFATE AERO                                                               
+33 EL PALOMAR AERO                                                                
+34 EL TREBOL                                                                      
+35 ESCUELA DE AVIACION MILITAR AERO                                               
+36 ESQUEL AERO                                                                    
+37 EZEIZA AERO                                                                    
+38 FORMOSA AERO                                                                   
+39 GENERAL PICO AERO                                                              
+40 GOBERNADOR GREGORES AERO                                                       
+41 GUALEGUAYCHU AERO                                                              
+42 IGUAZU AERO                                                                    
+43 JACHAL                                                                         
+44 JUJUY AERO                                                                     
+45 JUJUY U N                                                                      
+46 JUNIN AERO                                                                     
+47 LA PLATA AERO                                                                  
+48 LA QUIACA OBSERVATORIO                                                         
+49 LA RIOJA AERO                                                                  
+50 LABOULAYE AERO                                                                 
+51 LAS FLORES                                                                     
+52 LAS LOMITAS                                                                    
+53 MALARGUE AERO                                                                  
+54 MAQUINCHAO                                                                     
+55 MAR DEL PLATA AERO                                                             
+56 MARCOS JUAREZ AERO                                                             
+57 MARIANO MORENO AERO                                                            
+58 MENDOZA AERO                                                                   
+59 MENDOZA OBSERVATORIO                                                           
+60 MERCEDES AERO (CTES)                                                           
+61 MERLO AERO                                                                     
+62 METAN                                                                          
+63 MONTE CASEROS AERO                                                             
+64 MORON AERO                                                                     
+65 NEUQUEN AERO                                                                   
+66 NUEVE DE JULIO                                                                 
+67 OBERA                                                                          
+68 OLAVARRIA AERO                                                                 
+69 ORAN AERO                                                                      
+70 PARANA AERO                                                                    
+71 PASO DE INDIOS                                                                 
+72 PASO DE LOS LIBRES AERO                                                        
+73 PEHUAJO AERO                                                                   
+74 PERITO MORENO AERO                                                             
+75 PIGUE AERO                                                                     
+76 PILAR OBSERVATORIO                                                             
+77 POSADAS AERO                                                                   
+78 PRESIDENCIA ROQUE SAENZ PEÑA AERO                                              
+79 PUERTO DESEADO AERO                                                            
+80 PUERTO MADRYN AERO                                                             
+81 PUNTA INDIO B.A.                                                               
+82 RAFAELA AERO                                                                   
+83 RECONQUISTA AERO                                                               
+84 RESISTENCIA AERO                                                               
+85 RIO COLORADO                                                                   
+86 RIO CUARTO AERO                                                                
+87 RIO GALLEGOS AERO                                                              
+88 RIO GRANDE B.A.                                                                
+89 RIVADAVIA                                                                      
+90 ROSARIO AERO                                                                   
+91 SALTA AERO                                                                     
+92 SAN ANTONIO OESTE AERO                                                         
+93 SAN FERNANDO AERO                                                              
+94 SAN JUAN AERO                                                                  
+95 SAN JULIAN AERO                                                                
+96 SAN LUIS AERO                                                                  
+97 SAN MARTIN (MZA)                                                               
+98 SAN RAFAEL AERO                                                                
+99 SANTA CRUZ AERO                                                                
+100 SANTA ROSA AERO                                                                
+101 SANTA ROSA DE CONLARA AERO                                                     
+102 SANTIAGO DEL ESTERO AERO                                                       
+103 SAUCE VIEJO AERO                                                               
+104 SUNCHALES AERO                                                                 
+105 TANDIL AERO                                                                    
+106 TARTAGAL AERO                                                                  
+107 TERMAS DE RIO HONDO AERO                                                       
+108 TINOGASTA                                                                      
+109 TRELEW AERO                                                                    
+110 TRENQUE LAUQUEN                                                                
+111 TRES ARROYOS                                                                   
+112 TUCUMAN AERO                                                                   
+113 USHUAIA AERO                                                                   
+114 USPALLATA                                                                      
+115 VENADO TUERTO AERO                                                             
+116 VICTORICA                                                                      
+117 VIEDMA AERO                                                                    
+118 VILLA DE MARIA DEL RIO SECO                                                    
+119  29.8  11.0 VILLA DOLORES AERO                                                             
+120  22.3   7.5 VILLA GESELL AERO                                                              
+121 32.7   7.7 VILLA REYNOLDS AERO                     
