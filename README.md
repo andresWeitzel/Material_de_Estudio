@@ -1,7 +1,7 @@
-# Material-de-Estudio :+1:
+# Material-de-Estudio ♣
 
-## PDF'S 🚀
-## EXAMENES 🖇️
-## PAPERS ⚙️
-## INFO  📢
-## ETC ✒️
+## PDF'S 
+## EXAMENES
+## PAPERS 
+## INFO 
+## ETC 
