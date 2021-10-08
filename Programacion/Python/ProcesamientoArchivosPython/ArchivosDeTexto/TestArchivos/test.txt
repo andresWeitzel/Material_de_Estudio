@@ -1,0 +1,36 @@
+2021-03-01 Monday 05:15:01 root:INFO:So should this
+2021-03-01 Monday 05:15:01 root:WARNING:And this, too
+2021-03-01 Monday 05:15:01 root:ERROR:And non-ASCII stuff, too, agfcasfdcsfcdcgafs
+2021-03-01 Monday 05:15:09 root:INFO:So should this
+2021-03-01 Monday 05:15:09 root:WARNING:And this, too
+2021-03-01 Monday 05:15:09 root:ERROR:And non-ASCII stuff, too, agfcasfdcsfcdcgafs
+2021-03-01 Monday 05:17:16 root:INFO:So should this
+2021-03-01 Monday 05:17:16 root:WARNING:And this, too
+2021-03-01 Monday 05:17:16 root:ERROR:And non-ASCII stuff, too, agfcasfdcsfcdcgafs
+2021-03-01 Monday 05:17:51 root:INFO:So should this
+2021-03-01 Monday 05:17:51 root:WARNING:And this, too
+2021-03-01 Monday 05:17:51 root:ERROR:And non-ASCII stuff, too, agfcasfdcsfcdcgafs
+2021-03-01 Monday 05:18:15 root:INFO:So should this
+2021-03-01 Monday 05:18:15 root:WARNING:And this, too
+2021-03-01 Monday 05:18:15 root:ERROR:And non-ASCII stuff, too, kilo
+2021-03-01 Monday 05:18:20 root:INFO:So should this
+2021-03-01 Monday 05:18:20 root:WARNING:And this, too
+2021-03-01 Monday 05:18:20 root:ERROR:And non-ASCII stuff, too, kilo
+2021-03-01 Monday 05:19:41 root:INFO:So should this
+2021-03-01 Monday 05:19:41 root:WARNING:And this, too
+2021-03-01 Monday 05:19:41 root:ERROR:And non-ASCII stuff, too, agfcasfdcsfcdcgafs
+01/03/2021 05:20:15 AM root:INFO:So should this
+01/03/2021 05:20:15 AM root:WARNING:And this, too
+01/03/2021 05:20:15 AM root:ERROR:And non-ASCII stuff, too, agfcasfdcsfcdcgafs
+01-03-2021 05:22:19 AM root:INFO:So should this
+01-03-2021 05:22:19 AM root:WARNING:And this, too
+01-03-2021 05:22:19 AM root:ERROR:And non-ASCII stuff, too, agfcdfsdfs
+01-03-2021 05:24:05 AM root:INFO:So should this
+01-03-2021 05:24:05 AM root:WARNING:And this, too
+01-03-2021 05:24:05 AM root:ERROR:And non-ASCII stuff, too, ASADO
+01-03-2021 05:47:22 AM root:ERROR:Este mensaje es para DEBUG
+01-03-2021 05:49:14 AM root:ERROR:Este mensaje es para DEBUG
+01-03-2021 05:49:28 AM root:INFO:So should this
+01-03-2021 05:49:28 AM root:WARNING:And this, too
+01-03-2021 05:49:28 AM root:ERROR:And non-ASCII stuff, too, ASADO
+01-03-2021 05:50:01 AM root:ERROR:Este mensaje es para DEBUG

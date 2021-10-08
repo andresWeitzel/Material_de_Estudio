@@ -1,0 +1,20 @@
+
+
+04-04-2021 22:16:48 PM root:INFO:Se agrega el Cliente: Miguelina Hamilton, 18/01/2021, $8.600
+
+04-04-2021 22:16:48 PM root:INFO:Se agrega el Cliente: Jose Paz, 01/02/2021, $2.000
+
+04-04-2021 22:16:48 PM root:WARNING:Se Actualizó el Archivo
+
+04-04-2021 22:16:48 PM root:INFO:Se Finalizada la Modificación del Archivo
+---------------------------------------------
+
+04-04-2021 22:25:30 PM root:INFO:Se agrega el Cliente: Miguelina Hamilton, 18/01/2021, $8.600
+
+04-04-2021 22:25:30 PM root:INFO:Se agrega el Cliente: Jose Paz, 01/02/2021, $2.000
+
+04-04-2021 22:25:30 PM root:WARNING:Se Actualizó el Archivo
+
+04-04-2021 22:25:30 PM root:INFO:Se Finaliza la Modificación del Archivo
+---------------------------------------------
+

@@ -1,0 +1,12 @@
+Cliente, Fecha, Venta
+Aurelio Martinez, 01/02/2021, $12.000
+Marcela Gustamante, 04/01/2021, $16.000
+Gaston Perez, 10/02/2021, $1.000
+Claudia Caspin, 12/01/2021, $8.000
+Javier Gutierrez, 21/01/2021, $5.600
+
+------Nuevos Clientes-----
+Miguelina Hamilton, 18/01/2021, $8.600
+Jose Paz, 01/02/2021, $2.000
+
+Última Modificación: 04/04/2021 22:25:30
